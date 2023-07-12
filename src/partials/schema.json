@@ -1,0 +1,294 @@
+{
+    "status": 200,
+    "data": {
+      "home_search": {
+        "total": 2,
+        "count": 2,
+        "results": [
+          {
+            "primary_photo": {
+              "href": "https://ap.rdcpix.com/7ea9de6658439011dbac35b4ecfcbe25l-m4076201872s-w1024_h768.jpg"
+            },
+            "last_update_date": "2023-01-19T01:11:09Z",
+            "source": {
+              "agents": [
+                {
+                  "office_name": null
+                }
+              ],
+              "id": "ORFL",
+              "plan_id": null,
+              "spec_id": null,
+              "type": "mls"
+            },
+            "tags": [
+              "central_air",
+              "dining_room",
+              "hardwood_floors",
+              "pets_allowed",
+              "single_story",
+              "fenced_yard",
+              "open_floor_plan",
+              "floor_plan"
+            ],
+            "permalink": "1611-NE-5th-Pl_Gainesville_FL_32641_M67263-37975",
+            "status": "for_sale",
+            "list_date": "2022-12-22T19:17:17Z",
+            "open_houses": null,
+            "tax_record": {
+              "public_record_id": "56C3D2B9B0D377130493B2AA729A9B08"
+            },
+            "branding": [
+              {
+                "name": "Berkshire Hathaway HomeServices Florida Realty",
+                "photo": "https://ap.rdcpix.com/8e9fa632e71d936f99471d62f88c2a84o-c3318367445s.jpg",
+                "type": "Office"
+              }
+            ],
+            "photos": [
+              {
+                "href": "https://ap.rdcpix.com/7ea9de6658439011dbac35b4ecfcbe25l-m4076201872s-w1024_h768.jpg"
+              },
+              {
+                "href": "https://ap.rdcpix.com/7ea9de6658439011dbac35b4ecfcbe25l-m1565842292s-w1024_h768.jpg"
+              }
+            ],
+            "coming_soon_date": null,
+            "list_price": 145000,
+            "matterport": false,
+            "property_id": "6726337975",
+            "flags": {
+              "is_new_construction": null,
+              "is_subdivision": null,
+              "is_plan": null,
+              "is_price_reduced": null,
+              "is_pending": null,
+              "is_foreclosure": null,
+              "is_new_listing": false,
+              "is_coming_soon": null,
+              "is_contingent": null
+            },
+            "lead_attributes": {
+              "show_contact_an_agent": true,
+              "opcity_lead_attributes": {
+                "flip_the_market_enabled": false,
+                "cashback_enabled": false
+              },
+              "lead_type": "advantage_pro"
+            },
+            "community": null,
+            "products": {
+              "products": [
+                "core.agent",
+                "core.broker",
+                "listing_owner_brand.broker",
+                "listing_owner_lead.broker"
+              ],
+              "brand_name": "advantage_pro"
+            },
+            "virtual_tours": [
+              {
+                "type": null,
+                "href": "https://view.paradym.com/idx/4777791"
+              }
+            ],
+            "description": {
+              "year_built": 2003,
+              "baths_3qtr": null,
+              "sold_date": "2022-09-26",
+              "sold_price": 112500,
+              "baths_full": 2,
+              "name": null,
+              "baths_half": null,
+              "lot_sqft": 4858,
+              "sqft": 1237,
+              "baths": 2,
+              "sub_type": null,
+              "baths_1qtr": null,
+              "garage": null,
+              "stories": 1,
+              "beds": 3,
+              "type": "single_family"
+            },
+            "listing_id": "2950886686",
+            "price_reduced_amount": null,
+            "location": {
+              "address": {
+                "postal_code": "32641",
+                "state": "Florida",
+                "coordinate": {
+                  "lon": -82.303312,
+                  "lat": 29.656022
+                },
+                "city": "Gainesville",
+                "state_code": "FL",
+                "line": "1611 NE 5th Pl"
+              },
+              "street_view_url": "https://maps.googleapis.com/maps/api/streetview?channel=rdc-streetview&client=gme-movesalesinc&location=1611%20NE%205th%20Pl%2C%20Gainesville%2C%20FL%2032641&size=640x480&source=outdoor&signature=Z7pCj2fNVbkJasGyzSyaOqbaXTc=",
+              "county": {
+                "fips_code": "12001",
+                "name": "Alachua"
+              }
+            },
+            "other_listings": {
+              "rdc": [
+                {
+                  "listing_id": "2950886686",
+                  "listing_key": null,
+                  "status": "for_sale",
+                  "primary": true
+                },
+                {
+                  "listing_id": "539812102",
+                  "listing_key": null,
+                  "status": "sold",
+                  "primary": null
+                }
+              ]
+            }
+          },
+          {
+            "primary_photo": {
+              "href": "https://ap.rdcpix.com/1bbfd3a5b480c29972990e6680faf7e5l-m2394602816s-w1024_h768.jpg"
+            },
+            "last_update_date": "2023-01-19T01:11:09Z",
+            "source": {
+              "agents": [
+                {
+                  "office_name": null
+                }
+              ],
+              "id": "ORFL",
+              "plan_id": null,
+              "spec_id": null,
+              "type": "mls"
+            },
+            "tags": [
+              "central_air",
+              "city_view",
+              "cul_de_sac",
+              "dining_room",
+              "hardwood_floors",
+              "laundry_room",
+              "pets_allowed",
+              "view",
+              "washer_dryer",
+              "two_or_more_stories",
+              "garage_1_or_more",
+              "front_porch",
+              "fixer_upper"
+            ],
+            "permalink": "1109-NE-5th-Pl_Gainesville_FL_32601_M52447-07261",
+            "status": "for_sale",
+            "list_date": "2022-12-22T17:07:48Z",
+            "open_houses": null,
+            "tax_record": {
+              "public_record_id": "A6B15B60242196A4A1053FFEFF9646AA"
+            },
+            "branding": [
+              {
+                "name": "Coldwell Banker M.M. Parrish Realtors",
+                "photo": "https://ap.rdcpix.com/0e6843ed198ef762a0dbdb2599521761o-c499432740s.jpg",
+                "type": "Office"
+              }
+            ],
+            "photos": [
+              {
+                "href": "https://ap.rdcpix.com/1bbfd3a5b480c29972990e6680faf7e5l-m2394602816s-w1024_h768.jpg"
+              },
+              {
+                "href": "https://ap.rdcpix.com/1bbfd3a5b480c29972990e6680faf7e5l-m1124648828s-w1024_h768.jpg"
+              }
+            ],
+            "coming_soon_date": null,
+            "list_price": 175000,
+            "matterport": false,
+            "property_id": "5244707261",
+            "flags": {
+              "is_new_construction": null,
+              "is_subdivision": null,
+              "is_plan": null,
+              "is_price_reduced": null,
+              "is_pending": null,
+              "is_foreclosure": null,
+              "is_new_listing": false,
+              "is_coming_soon": null,
+              "is_contingent": null
+            },
+            "lead_attributes": {
+              "show_contact_an_agent": true,
+              "opcity_lead_attributes": {
+                "flip_the_market_enabled": false,
+                "cashback_enabled": false
+              },
+              "lead_type": "advantage_pro"
+            },
+            "community": null,
+            "products": {
+              "products": [
+                "core.agent",
+                "core.broker",
+                "listing_owner_lead.broker",
+                "listing_owner_brand.broker"
+              ],
+              "brand_name": "advantage_pro"
+            },
+            "virtual_tours": [
+              {
+                "type": null,
+                "href": "https://www.propertypanorama.com/instaview/stellar/GC510125"
+              }
+            ],
+            "description": {
+              "year_built": 1956,
+              "baths_3qtr": null,
+              "sold_date": "1992-12-14",
+              "sold_price": 41600,
+              "baths_full": 1,
+              "name": null,
+              "baths_half": 1,
+              "lot_sqft": 7888,
+              "sqft": 1210,
+              "baths": 2,
+              "sub_type": null,
+              "baths_1qtr": null,
+              "garage": null,
+              "stories": 2,
+              "beds": 3,
+              "type": "single_family"
+            },
+            "listing_id": "2950883756",
+            "price_reduced_amount": null,
+            "location": {
+              "address": {
+                "postal_code": "32601",
+                "state": "Florida",
+                "coordinate": {
+                  "lon": -82.311268,
+                  "lat": 29.656132
+                },
+                "city": "Gainesville",
+                "state_code": "FL",
+                "line": "1109 NE 5th Pl"
+              },
+              "street_view_url": "https://maps.googleapis.com/maps/api/streetview?channel=rdc-streetview&client=gme-movesalesinc&location=1109%20NE%205th%20Pl%2C%20Gainesville%2C%20FL%2032601&size=640x480&source=outdoor&signature=kBnCBRS4r8jLKoP6xEq7UT56TuU=",
+              "county": {
+                "fips_code": "12001",
+                "name": "Alachua"
+              }
+            },
+            "other_listings": {
+              "rdc": [
+                {
+                  "listing_id": "2950883756",
+                  "listing_key": null,
+                  "status": "for_sale",
+                  "primary": true
+                }
+              ]
+            }
+          }
+        ]
+      }
+    }
+  }
