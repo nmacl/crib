@@ -3,9 +3,10 @@
 @tailwind utilities;
 
 :root {
-  font-family: Inter, Avenir, Helvetica, Arial, sans-serif;
-  line-height: 36px;
+  font-family: 'Montserrat', Avenir, Helvetica, Arial, sans-serif;
+  line-height: 40px;
   font-weight: 400;
+  color: white;
 
   color-scheme: light dark;
   background-color: #242424;
