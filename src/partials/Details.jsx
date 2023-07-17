@@ -4,7 +4,6 @@ import { faBath, faBed, faRuler, faCalendar, faDollarSign, faHome, faBuilding } 
 
 const iconMappings = {
   baths: faBath,
-  baths_full: faBath,
   beds: faBed,
   lot_sqft: faRuler,
   sold_date: faCalendar,
@@ -16,21 +15,62 @@ const iconMappings = {
 };
 
 const renderProperty = (property, value) => {
+  const icon = iconMappings[property];
 
-    const icon = iconMappings[property];
+  if (!icon) {
+    return null; // handle unknown properties
+  }
 
-    if (!icon) {
-      return null; // handle unknown properties
-    }
+  let formattedValue = value;
 
-    return (
-      <li key={property} className="text-waves my-8 w-1/2">
-        <FontAwesomeIcon icon={icon} /> {value}
-      </li>
-    );
-  };
+  // Format dates
+  if (property === 'sold_date' || property === 'year_built') {
+    const date = new Date(value);
+    formattedValue = date.getFullYear().toString();
+  }
+
+  // Format prices
+  if (property === 'sold_price') {
+    formattedValue = new Intl.NumberFormat('en-US', {
+      style: 'currency',
+      currency: 'USD',
+    }).format(value);
+    formattedValue = 'Sold price ' + formattedValue;
+  }
+
+  if(property === 'lot_sqft') 
+    formattedValue = 'Lot size ' + formattedValue + ' sqft';
+
+  if(property === 'sqft')
+    formattedValue = formattedValue + ' sqft';
+
+  if(property === 'sold_date')
+    formattedValue = 'Last sold ' + formattedValue;
+
+  if(property === 'year_built')
+    formattedValue = 'Built in ' + formattedValue;
+
+  if (property === 'type') {
+    formattedValue = formattedValue.replace('_', ' ');
+    formattedValue = formattedValue.charAt(0).toUpperCase() + formattedValue.slice(1);
+  }
+
+  if(property === 'stories')
+    formattedValue = 'Stories ' + formattedValue;
+  
+
+
+  return (
+    <li key={property} className="text-waves my-4 w-1/2">
+       <FontAwesomeIcon icon={icon} /> {formattedValue}
+    </li>
+  );
+};
+
 
 const l = jsons.properties.property;
+
+let id = 1;
 
 
 export default function Details() {
@@ -39,13 +79,12 @@ export default function Details() {
         <div>
             <h2 className="text-3xl my-8">Property Details</h2>
             <ul className='border-2 border-grainy justify-center flex-wrap flex'>
-            {Object.entries(l[1].description).map(([property, value]) =>
+            {Object.entries(l[id].description).map(([property, value]) =>
                 renderProperty(property, value)
             )}
-            <img src={l[1].primary_photo.href} className="p-16 w-full h-96 rounded-2xl shadow-lg"></img>
+            <img src={l[id].primary_photo.href} className="p-8 w-full h-96 rounded-2xl shadow-lg"></img>
             </ul>
         </div>
-    
     );
 }
 
