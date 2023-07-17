@@ -17,10 +17,6 @@ const iconMappings = {
 const renderProperty = (property, value) => {
   const icon = iconMappings[property];
 
-  if (!icon) {
-    return null; // handle unknown properties
-  }
-
   let formattedValue = value;
 
   // Format dates
@@ -77,7 +73,14 @@ export default function Details() {
     animateCSS('input, label, select, button', 'fadeOutRight'); 
     return (
         <div>
-            <h2 className="text-3xl my-8">Property Details</h2>
+            <h2 className="text-3xl my-8 text-emerald-100"> Key Metrics </h2>
+            <ul className='border-2 border-emerald-400 justify-center flex-wrap flex'>
+              {l[id].list_price}
+              {Object.entries(l[id].tags).map(([property, value]) =>
+                renderProperty(property, value)
+              )}
+            </ul>
+            <h2 className="text-3xl my-8 text-waves">Property Details</h2>
             <ul className='border-2 border-grainy justify-center flex-wrap flex'>
             {Object.entries(l[id].description).map(([property, value]) =>
                 renderProperty(property, value)
