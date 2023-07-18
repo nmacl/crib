@@ -3,12 +3,13 @@ import { useEffect } from 'react';
 import { initializeApp } from "firebase/app";
 import { getAnalytics } from "firebase/analytics";
 import { getAuth, signInWithPopup, GoogleAuthProvider } from "firebase/auth";
-import { getDatabase, ref, set } from "firebase/database";
+import { getDatabase, increment, ref, set, child, get, onValue, push } from "firebase/database";
 import { data } from 'autoprefixer';
 import { useResolvedPath } from 'react-router-dom';
 import { library, icon } from '@fortawesome/fontawesome-svg-core'
 import { faMoneyBill } from '@fortawesome/free-solid-svg-icons'
 import Details from './Details'
+import jsons from './firebase.json';
 
 
 
@@ -85,47 +86,37 @@ function Search(props) {
 
   const [showDetails, setShowDetails] = useState(false);
 
+  const db = getDatabase();
+
+  const properties = ref(db, 'properties/');
+
+  const propertyReq = ref(db, 'properties/property');
+
+  const l = jsons.properties.property;
+
   const handleClick = () => {
     if(true) {
       
       console.log("City: " + city);
       console.log("State: " + state);
       console.log("Address: " + address);
-      console.log()
+      console.log();
+
+      setShowDetails(true);
 
       // Code to fetch properties from database
-      //let results = fetchProperties(city, state, address);
-      //console.log(results);
-      //console.log(typeof(results));
-
-      //jsonStuff();
 
     } else {
+      fetchProperties(city, state, address);
       notLogin();
       
     }
-    setShowDetails(true);
+    //setShowDetails(true);
   };
 
   useEffect(() => {
     setLogin(false);
   });
-
-  const removeNumbersBeforeStreet = address => {
-    let modifiedAddress = "";
-    let foundStreet = false;
-  
-    for (const char of address) {
-      if (isNaN(char) && !foundStreet) {
-        foundStreet = true;
-      }
-      if (foundStreet) {
-        modifiedAddress += char;
-      }
-    }
-  
-    return modifiedAddress.trim();
-  };
 
   const options = {
     method: 'GET',
@@ -136,43 +127,20 @@ function Search(props) {
   };
 
   const fetchProperties = (stateCode, city, location) => {
-    const URL = `https://us-real-estate.p.rapidapi.com/v2/for-sale?offset=0&limit=42&state_code=${stateCode}&city=${city}&location=${removeNumbersBeforeStreet(location)}&sort=newest`;
-  
+    const URL = `https://us-real-estate.p.rapidapi.com/v2/for-sale?offset=0&limit=42&state_code=${stateCode}&city=${city}&sort=newest&limit=42`;
+    //const URL = 'https://us-real-estate.p.rapidapi.com/v3/for-sale?state_code=MI&city=Detroit&sort=newest&offset=0&limit=42';
     fetch(URL, options)
       .then(response => response.json())
       .then(response => {
         const property = response.data.home_search.results;
+        let fbaseProps = Object.values(property);
 
-        const db = getDatabase();
-        set(ref(db, 'properties/'), {
-          property
-        });
-        console.log(response);
-        match(property);
-      }
-      )
-      .catch(err => console.error(err));
-  }
-
-  function match(property) {
-    const user = props.user;
-    connsole.log(address);
-    m = findKeyWithValue(property, address);
-    console.log(m);
-  }
-
-  function findKeyWithValue(obj, string) {
-    for (const key in obj) {
-      if (typeof obj[key] === 'object') {
-        const result = findKeyWithValue(obj[key], string);
-        if (result) {
-          return `${key}.${result}`;
+        for(let i = 0; i < fbaseProps.length; i++) {
+          console.log(fbaseProps[i]);
+          push(properties, fbaseProps[i]);
         }
-      } else if (obj[key] === string) {
-        return key;
-      }
-    }
-    return null;
+      })
+      .catch(err => console.error(err));
   }
 
   return (

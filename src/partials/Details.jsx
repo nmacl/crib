@@ -66,8 +66,6 @@ const renderProperty = (property, value) => {
 
 const l = jsons.properties.property;
 
-let id = 1;
-
 
 export default function Details() {
     animateCSS('input, label, select, button', 'fadeOutRight'); 
