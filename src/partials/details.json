@@ -1,0 +1,2206 @@
+{
+    "photos": [
+        {
+            "href": "https://p.rdcpix.com/v02/lad9f4244-m0x-w1024_h768.jpg"
+        },
+        {
+            "href": "https://p.rdcpix.com/v02/lad9f4244-m1x-w1024_h768.jpg"
+        },
+        {
+            "href": "https://p.rdcpix.com/v02/lad9f4244-m2x-w1024_h768.jpg"
+        },
+        {
+            "href": "https://p.rdcpix.com/v02/lad9f4244-m3x-w1024_h768.jpg"
+        },
+        {
+            "href": "https://p.rdcpix.com/v02/lad9f4244-m4x-w1024_h768.jpg"
+        },
+        {
+            "href": "https://p.rdcpix.com/v02/lad9f4244-m5x-w1024_h768.jpg"
+        },
+        {
+            "href": "https://p.rdcpix.com/v02/lad9f4244-m6x-w1024_h768.jpg"
+        },
+        {
+            "href": "https://p.rdcpix.com/v02/lad9f4244-m7x-w1024_h768.jpg"
+        },
+        {
+            "href": "https://p.rdcpix.com/v02/lad9f4244-m8x-w1024_h768.jpg"
+        },
+        {
+            "href": "https://p.rdcpix.com/v02/lad9f4244-m9x-w1024_h768.jpg"
+        },
+        {
+            "href": "https://p.rdcpix.com/v02/lad9f4244-m10x-w1024_h768.jpg"
+        },
+        {
+            "href": "https://p.rdcpix.com/v02/lad9f4244-m11x-w1024_h768.jpg"
+        },
+        {
+            "href": "https://p.rdcpix.com/v02/lad9f4244-m12x-w1024_h768.jpg"
+        },
+        {
+            "href": "https://p.rdcpix.com/v02/lad9f4244-m13x-w1024_h768.jpg"
+        },
+        {
+            "href": "https://p.rdcpix.com/v02/lad9f4244-m14x-w1024_h768.jpg"
+        },
+        {
+            "href": "https://p.rdcpix.com/v02/lad9f4244-m15x-w1024_h768.jpg"
+        },
+        {
+            "href": "https://p.rdcpix.com/v02/lad9f4244-m16x-w1024_h768.jpg"
+        },
+        {
+            "href": "https://p.rdcpix.com/v02/lad9f4244-m17x-w1024_h768.jpg"
+        },
+        {
+            "href": "https://p.rdcpix.com/v02/lad9f4244-m18x-w1024_h768.jpg"
+        },
+        {
+            "href": "https://p.rdcpix.com/v02/lad9f4244-m19x-w1024_h768.jpg"
+        },
+        {
+            "href": "https://p.rdcpix.com/v02/lad9f4244-m20x-w1024_h768.jpg"
+        },
+        {
+            "href": "https://p.rdcpix.com/v02/lad9f4244-m21x-w1024_h768.jpg"
+        },
+        {
+            "href": "https://p.rdcpix.com/v02/lad9f4244-m22x-w1024_h768.jpg"
+        },
+        {
+            "href": "https://p.rdcpix.com/v02/lad9f4244-m23x-w1024_h768.jpg"
+        },
+        {
+            "href": "https://p.rdcpix.com/v02/lad9f4244-m24x-w1024_h768.jpg"
+        }
+    ],
+    "forwarded_property_ids": [
+        6665537563
+    ],
+    "mpr_id": 6105003589,
+    "address": {
+        "street_post_direction": null,
+        "state": "Florida",
+        "address_validation_code": "121",
+        "line": "62 Birch Pl",
+        "boundary": {
+            "coordinates": [
+                -80.098301,
+                26.965626
+            ],
+            "type": "Point"
+        },
+        "street_number": "62",
+        "street_suffix": "Pl",
+        "time_zone": "America/New_York",
+        "state_code": "FL",
+        "county": "Palm Beach",
+        "street_direction": null,
+        "postal_code": "33469",
+        "county_needed_for_uniq": false,
+        "street_name": "Birch",
+        "country": "USA",
+        "city": "Tequesta",
+        "location": {
+            "lon": -80.098301,
+            "lat": 26.965626
+        },
+        "unit_value": null
+    },
+    "buyer_agent_for_far": {
+        "state_license": "",
+        "name": null,
+        "nrds_verified_id": null,
+        "mls_membership": {
+            "member": {
+                "agent_system_id": "20018284",
+                "name": "Marguerite Wilson",
+                "abbreviation": "BEFL",
+                "id": "20018284"
+            }
+        }
+    },
+    "property_overview": "62 Birch Pl, Tequesta, FL 33469 is a single family home built in 1979. This property was last sold for $363,000 in 2017. <br><br>According to the Tequesta public records, the property at 62 Birch Pl, Tequesta, FL 33469 has approximately 2526 square feet, 4 beds and 2 baths. Nearby schools include Jupiter High School, Jupiter Middle School and Limestone Creek Elementary School. ",
+    "flood": {
+        "environmental_risk": 1,
+        "flood_factor_score": 1,
+        "fema_zone": [
+            "X"
+        ],
+        "fsid": "1208366855",
+        "trend_direction": 0,
+        "flood_factor_severity": "minimal"
+    },
+    "agent": {
+        "slogan": "",
+        "office_name": "Illustrated Properties- Abacoa",
+        "state_license": "0144362",
+        "name": "Linda D. Cassidy",
+        "nrds_verification_method": "Claimed",
+        "email": "lcassidy@ipre.com",
+        "profile_name": "Linda D. Cassidy",
+        "mls_membership": {
+            "member": {
+                "office_system_id": "606714",
+                "abbreviation": "BEFL",
+                "id": "30144362",
+                "agent_system_id": "30144362",
+                "name": "Linda Cassidy"
+            }
+        },
+        "nrds_verified_id": "283001034",
+        "phones": {
+            "primary": [
+                {
+                    "number": "5614278864",
+                    "type": "mobile"
+                },
+                {
+                    "number": "5614278864",
+                    "type": "office"
+                }
+            ]
+        },
+        "photo": {
+            "href": "https://p.rdcpix.com/v06/g81451e00-c0md-rl.jpg"
+        },
+        "href": "http://lindacassidy.ipre.com",
+        "advertiser_id": 1983873,
+        "nrds_id": "283001034"
+    },
+    "office": {
+        "slogan": "Our Roots Run Deep",
+        "name": "Illustrated Properties- Abacoa",
+        "photo": {
+            "href": "https://ap.rdcpix.com/1143142011/6815202df8e3c0cfd6efdd992e286871g-c0l.jpg"
+        },
+        "email": "illustrated-properties@inbound.opcity.com",
+        "phones": {
+            "primary": [
+                {
+                    "number": "5612202148",
+                    "type": "office"
+                },
+                {
+                    "number": "5616225006",
+                    "type": "office"
+                }
+            ],
+            "secondary": [
+                {
+                    "number": "5616260304",
+                    "type": "fax"
+                }
+            ]
+        },
+        "address": {
+            "city": "Jupiter",
+            "state_code": "FL"
+        },
+        "mls_membership": {
+            "member": {
+                "office_system_id": "606714"
+            }
+        },
+        "href": "http://ipre.com",
+        "advertiser_id": 1985254,
+        "advantage_phone": {
+            "display_number": "(561) 220-2148"
+        }
+    },
+    "noise": {
+        "score_text": "Low",
+        "traffic_text": "Low",
+        "local_text": "Low",
+        "score": 82,
+        "airport_text": "Low"
+    },
+    "display_property_type": "Single Family Home",
+    "property_id": 6105003589,
+    "rental_avm": {
+        "estimate": 0
+    },
+    "county": {
+        "fips": "12099",
+        "name": "Palm Beach"
+    },
+    "buyer_office": {
+        "slogan": "",
+        "name": "CRANE REED PROPERTIES, LLC",
+        "photo": {
+            "href": "http://p.rdcpix.com/v01/o65af1300-c0l.gif"
+        },
+        "email": "csmitheman@crane-reed.com",
+        "address": {
+            "city": "Jupiter",
+            "state_code": "FL"
+        },
+        "phone2": {
+            "trackable": null,
+            "number": "5617459171",
+            "ext": "",
+            "primary": false,
+            "type": "Fax"
+        },
+        "mls_memberships": {
+            "member": {
+                "office_system_id": "800109"
+            }
+        },
+        "href": "http://www.crane-reed.com",
+        "phone1": {
+            "trackable": null,
+            "number": "5617452339",
+            "ext": "",
+            "primary": true,
+            "type": "Office"
+        },
+        "advertiser_id": 1290085
+    },
+    "listing_id": 629289378,
+    "stories": 1,
+    "search_areas": [
+        {
+            "city": "jupiter inlet",
+            "state_code": "fl"
+        },
+        {
+            "city": "tequesta",
+            "state_code": "fl"
+        }
+    ],
+    "id": 6105003589,
+    "prop_common": {
+        "bath_full": 2,
+        "bath": 2,
+        "type": "single_family",
+        "last_sold_price": 363000,
+        "permalink": "62-Birch-Pl_Tequesta_FL_33469_M61050-03589",
+        "status": "not_for_sale",
+        "year_built": 1979,
+        "sqft": 2526,
+        "baths_partial_calc": null,
+        "baths_full_calc": 2,
+        "description": "62 Birch Pl, Tequesta, FL 33469 is a single family home built in 1979. This property was last sold for $363,000 in 2017. According to the Tequesta public records, the property at 62 Birch Pl, Tequesta, FL 33469 has approximately 2526 square feet, 4 beds and 2 baths. Nearby schools include Jupiter High School, Jupiter Middle School and Limestone Creek Elementary School. ",
+        "rental_estimate": 0,
+        "bed": 4,
+        "original_price": 365000,
+        "price": 0
+    },
+    "query": {
+        "client_id": "haven",
+        "schema": "myhome"
+    },
+    "description": {
+        "garage_max": null,
+        "exterior": null,
+        "sqft_min": null,
+        "baths_partial_calc": null,
+        "sub_type": null,
+        "beds_min": null,
+        "baths_min": null,
+        "name": null,
+        "pool": null,
+        "baths_full_calc": 2,
+        "garage": 3,
+        "stories": 1,
+        "type": "single_family",
+        "garage_type": null,
+        "construction": null,
+        "roofing": null,
+        "sqft": 2526,
+        "rooms": null,
+        "baths_total": null,
+        "lot_sqft": null,
+        "zoning": null,
+        "year_renovated": null,
+        "baths_3qtr": null,
+        "year_built": 1979,
+        "units": null,
+        "cooling": null,
+        "beds": 4,
+        "baths_half": null,
+        "text": "Live in lovely Tequesta with easy access to shops, restaurants, galleries, worship, green markets and activities! Located on a cul-de-sac, this open plan opens to a tropical pool-patio backyard. Covered porch area adds to the entertainment area. 4 bedrooms, interior laundry room and Master Suite including private spa and sun area. 3 car garage plus utility/storage room. Stone fireplace in living room, separate kitchen with spacious breakfast area with new appliances. New water heater and washer. Newly renovated pool deck. Separate additional fenced yard. All measurements approximate.",
+        "heating": null,
+        "baths": 2,
+        "baths_full": 2,
+        "sqft_max": null,
+        "baths_max": null,
+        "beds_max": null,
+        "garage_min": null,
+        "fireplace": null
+    },
+    "avm_trend": {},
+    "neighborhoods": [
+        {
+            "city": "Tequesta",
+            "level": "residential_neighborhood",
+            "name": "Tequesta Pines",
+            "state_code": "FL",
+            "id": 4874174
+        }
+    ],
+    "property_history": [
+        {
+            "price_range_min": null,
+            "event_name": "Sold",
+            "date": "06/09/2017",
+            "source": "MLS #RX-10052045",
+            "sqft": 2526,
+            "iso_date": "2017-06-09",
+            "price_changed": -2000,
+            "datasource_name": "BeachesMLSFlex",
+            "previous_event_price": 365000,
+            "listing": {
+                "last_status_change_date": "2014-09-15T07:00:00Z",
+                "photos": null,
+                "last_update_date": "2014-09-15T07:00:00Z",
+                "list_price": 365000,
+                "status": "sold",
+                "suppression_flags": null,
+                "advertisers": [
+                    {
+                        "office": {
+                            "slogan": "Our Roots Run Deep",
+                            "name": "Illustrated Properties- Abacoa",
+                            "out_of_community": null,
+                            "application_url": null,
+                            "fulfillment_id": "1985254",
+                            "href": "http://ipre.com",
+                            "mls_set": "O-BEFL-606714",
+                            "email": "illustrated-properties@inbound.opcity.com"
+                        },
+                        "broker": {
+                            "logo": "",
+                            "name": "ILLUSTRATED PROPERTIES",
+                            "accent_color": "",
+                            "fulfillment_id": "842582"
+                        },
+                        "name": "Linda D. Cassidy",
+                        "mls_set": "A-BEFL-30144362",
+                        "email": "lcassidy@ipre.com",
+                        "nrds_id": "283001034",
+                        "type": "seller",
+                        "href": "http://lindacassidy.ipre.com",
+                        "slogan": "",
+                        "fulfillment_id": "1983873"
+                    }
+                ],
+                "buyers": [
+                    {
+                        "slogan": null,
+                        "broker": null,
+                        "name": null,
+                        "mls_set": null,
+                        "email": null,
+                        "nrds_id": null,
+                        "address": null,
+                        "phones": null,
+                        "office": {
+                            "slogan": "",
+                            "application_url": null,
+                            "name": "CRANE REED PROPERTIES, LLC",
+                            "mls_set": "O-BEFL-800109",
+                            "email": "csmitheman@crane-reed.com",
+                            "phones": [
+                                {
+                                    "trackable": null,
+                                    "ext": "",
+                                    "number": "5617452339",
+                                    "primary": true,
+                                    "type": "Office"
+                                },
+                                {
+                                    "trackable": null,
+                                    "ext": "",
+                                    "number": "5617459171",
+                                    "primary": false,
+                                    "type": "Fax"
+                                }
+                            ],
+                            "address": {
+                                "postal_code": "33477",
+                                "city": "Jupiter",
+                                "country": "US",
+                                "state": "",
+                                "state_code": "FL",
+                                "line": "967 Alternate A1A, Ste. 3"
+                            },
+                            "out_of_community": null,
+                            "county": {
+                                "name": null
+                            },
+                            "href": "http://www.crane-reed.com",
+                            "hours": null,
+                            "fulfillment_id": "1290085"
+                        },
+                        "href": null,
+                        "type": "buyer",
+                        "fulfillment_id": null
+                    }
+                ],
+                "description": {
+                    "text": "Live in lovely Tequesta with easy access to shops, restaurants, galleries, worship, green markets and activities! Located on a cul-de-sac, this open plan opens to a tropical pool-patio backyard. Covered porch area adds to the entertainment area. 4 bedrooms, interior laundry room and Master Suite including private spa and sun area. 3 car garage plus utility/storage room. Stone fireplace in living room, separate kitchen with spacious breakfast area with new appliances. New water heater and washer. Newly renovated pool deck. Separate additional fenced yard. All measurements approximate."
+                },
+                "listing_id": "629289378",
+                "source": {
+                    "agents": [
+                        {
+                            "office_name": "Illustrated Properties",
+                            "type": "seller",
+                            "office_phone": "(561)622-5006",
+                            "agent_name": "Linda Cassidy",
+                            "agent_id": "30144362",
+                            "office_id": "606714"
+                        },
+                        {
+                            "office_name": "Crane Reed Properties, Llc",
+                            "type": "buyer",
+                            "office_phone": null,
+                            "agent_name": "Marguerite Wilson",
+                            "agent_id": "20018284",
+                            "office_id": "800109"
+                        }
+                    ],
+                    "id": "BEFL"
+                },
+                "list_date": "2017-06-09T15:51:00Z"
+            },
+            "price": 363000,
+            "price_range_max": null
+        },
+        {
+            "price_range_min": null,
+            "event_name": "Listed",
+            "date": "09/15/2014",
+            "source": "MLS #RX-10052045",
+            "sqft": 2526,
+            "iso_date": "2014-09-15",
+            "price_changed": 0,
+            "datasource_name": "BeachesMLSFlex",
+            "previous_event_price": 363000,
+            "listing": {
+                "last_status_change_date": "2014-09-15T07:00:00Z",
+                "photos": null,
+                "last_update_date": "2014-09-15T07:00:00Z",
+                "list_price": 365000,
+                "status": "sold",
+                "suppression_flags": null,
+                "advertisers": [
+                    {
+                        "office": {
+                            "slogan": "Our Roots Run Deep",
+                            "name": "Illustrated Properties- Abacoa",
+                            "out_of_community": null,
+                            "application_url": null,
+                            "fulfillment_id": "1985254",
+                            "href": "http://ipre.com",
+                            "mls_set": "O-BEFL-606714",
+                            "email": "illustrated-properties@inbound.opcity.com"
+                        },
+                        "broker": {
+                            "logo": "",
+                            "name": "ILLUSTRATED PROPERTIES",
+                            "accent_color": "",
+                            "fulfillment_id": "842582"
+                        },
+                        "name": "Linda D. Cassidy",
+                        "mls_set": "A-BEFL-30144362",
+                        "email": "lcassidy@ipre.com",
+                        "nrds_id": "283001034",
+                        "type": "seller",
+                        "href": "http://lindacassidy.ipre.com",
+                        "slogan": "",
+                        "fulfillment_id": "1983873"
+                    }
+                ],
+                "buyers": [
+                    {
+                        "slogan": null,
+                        "broker": null,
+                        "name": null,
+                        "mls_set": null,
+                        "email": null,
+                        "nrds_id": null,
+                        "address": null,
+                        "phones": null,
+                        "office": {
+                            "slogan": "",
+                            "application_url": null,
+                            "name": "CRANE REED PROPERTIES, LLC",
+                            "mls_set": "O-BEFL-800109",
+                            "email": "csmitheman@crane-reed.com",
+                            "phones": [
+                                {
+                                    "trackable": null,
+                                    "ext": "",
+                                    "number": "5617452339",
+                                    "primary": true,
+                                    "type": "Office"
+                                },
+                                {
+                                    "trackable": null,
+                                    "ext": "",
+                                    "number": "5617459171",
+                                    "primary": false,
+                                    "type": "Fax"
+                                }
+                            ],
+                            "address": {
+                                "postal_code": "33477",
+                                "city": "Jupiter",
+                                "country": "US",
+                                "state": "",
+                                "state_code": "FL",
+                                "line": "967 Alternate A1A, Ste. 3"
+                            },
+                            "out_of_community": null,
+                            "county": {
+                                "name": null
+                            },
+                            "href": "http://www.crane-reed.com",
+                            "hours": null,
+                            "fulfillment_id": "1290085"
+                        },
+                        "href": null,
+                        "type": "buyer",
+                        "fulfillment_id": null
+                    }
+                ],
+                "description": {
+                    "text": "Live in lovely Tequesta with easy access to shops, restaurants, galleries, worship, green markets and activities! Located on a cul-de-sac, this open plan opens to a tropical pool-patio backyard. Covered porch area adds to the entertainment area. 4 bedrooms, interior laundry room and Master Suite including private spa and sun area. 3 car garage plus utility/storage room. Stone fireplace in living room, separate kitchen with spacious breakfast area with new appliances. New water heater and washer. Newly renovated pool deck. Separate additional fenced yard. All measurements approximate."
+                },
+                "listing_id": "629289378",
+                "source": {
+                    "agents": [
+                        {
+                            "office_name": "Illustrated Properties",
+                            "type": "seller",
+                            "office_phone": "(561)622-5006",
+                            "agent_name": "Linda Cassidy",
+                            "agent_id": "30144362",
+                            "office_id": "606714"
+                        },
+                        {
+                            "office_name": "Crane Reed Properties, Llc",
+                            "type": "buyer",
+                            "office_phone": null,
+                            "agent_name": "Marguerite Wilson",
+                            "agent_id": "20018284",
+                            "office_id": "800109"
+                        }
+                    ],
+                    "id": "BEFL"
+                },
+                "list_date": "2017-06-09T15:51:00Z"
+            },
+            "price": 365000,
+            "price_range_max": null
+        },
+        {
+            "price_range_min": null,
+            "event_name": "Sold",
+            "date": "09/15/2014",
+            "source": "MLS #RX-10052045",
+            "sqft": 2526,
+            "iso_date": "2014-09-15",
+            "price_changed": 0,
+            "datasource_name": "JTHSMLS",
+            "previous_event_price": 365000,
+            "listing": {
+                "last_status_change_date": "2014-09-15T07:00:00Z",
+                "photos": [
+                    {
+                        "href": "http://p.rdcpix.com/v02/l9974c644-m0s.jpg"
+                    },
+                    {
+                        "href": "http://p.rdcpix.com/v02/l9974c644-m1s.jpg"
+                    },
+                    {
+                        "href": "http://p.rdcpix.com/v02/l9974c644-m2s.jpg"
+                    },
+                    {
+                        "href": "http://p.rdcpix.com/v02/l9974c644-m3s.jpg"
+                    },
+                    {
+                        "href": "http://p.rdcpix.com/v03/l9974c644-m4s.jpg"
+                    },
+                    {
+                        "href": "http://p.rdcpix.com/v03/l9974c644-m5s.jpg"
+                    },
+                    {
+                        "href": "http://p.rdcpix.com/v03/l9974c644-m6s.jpg"
+                    },
+                    {
+                        "href": "http://p.rdcpix.com/v03/l9974c644-m7s.jpg"
+                    },
+                    {
+                        "href": "http://p.rdcpix.com/v03/l9974c644-m8s.jpg"
+                    },
+                    {
+                        "href": "http://p.rdcpix.com/v03/l9974c644-m9s.jpg"
+                    },
+                    {
+                        "href": "http://p.rdcpix.com/v03/l9974c644-m10s.jpg"
+                    },
+                    {
+                        "href": "http://p.rdcpix.com/v03/l9974c644-m11s.jpg"
+                    },
+                    {
+                        "href": "http://p.rdcpix.com/v02/l9974c644-m12s.jpg"
+                    },
+                    {
+                        "href": "http://p.rdcpix.com/v02/l9974c644-m13s.jpg"
+                    },
+                    {
+                        "href": "http://p.rdcpix.com/v02/l9974c644-m14s.jpg"
+                    },
+                    {
+                        "href": "http://p.rdcpix.com/v02/l9974c644-m15s.jpg"
+                    },
+                    {
+                        "href": "http://p.rdcpix.com/v02/l9974c644-m16s.jpg"
+                    },
+                    {
+                        "href": "http://p.rdcpix.com/v02/l9974c644-m17s.jpg"
+                    },
+                    {
+                        "href": "http://p.rdcpix.com/v02/l9974c644-m18s.jpg"
+                    },
+                    {
+                        "href": "http://p.rdcpix.com/v02/l9974c644-m19s.jpg"
+                    },
+                    {
+                        "href": "http://p.rdcpix.com/v01/l9974c644-m20s.jpg"
+                    },
+                    {
+                        "href": "http://p.rdcpix.com/v01/l9974c644-m21s.jpg"
+                    }
+                ],
+                "last_update_date": "2014-09-15T07:00:00Z",
+                "list_price": 365000,
+                "status": "sold",
+                "suppression_flags": null,
+                "advertisers": null,
+                "buyers": null,
+                "description": {
+                    "text": "Live in lovely Tequesta with easy access to shops, restaurants, galleries, worship, green markets and activities! Located on a cul-de-sac, this open plan opens to a tropical pool-patio backyard. Covered porch area adds to the entertainment area. 4 bedrooms, interior laundry room and Master Suite including private spa and sun area. 3 car garage plus utility/storage room. Stone fireplace in living room, separate kitchen with spacious breakfast area with new appliances. New water heater and washer. Newly renovated pool deck. Separate additional fenced yard. All measurements approximate."
+                },
+                "listing_id": "589835966",
+                "source": {
+                    "agents": [
+                        {
+                            "office_name": "Illustrated Properties",
+                            "type": "seller",
+                            "office_phone": "(561)622-5006",
+                            "agent_name": "Linda Cassidy",
+                            "agent_id": "30144362",
+                            "office_id": "606714"
+                        },
+                        {
+                            "office_name": "Crane Reed Properties, Llc",
+                            "type": "buyer",
+                            "office_phone": null,
+                            "agent_name": "Marguerite Wilson",
+                            "agent_id": "20018284",
+                            "office_id": "800109"
+                        }
+                    ],
+                    "id": "WPFL"
+                },
+                "list_date": "2014-06-25T07:00:00Z"
+            },
+            "price": 363000,
+            "price_range_max": null
+        },
+        {
+            "price_range_min": null,
+            "event_name": "Listed",
+            "date": "06/25/2014",
+            "source": "MLS #RX-10052045",
+            "previous_event_price": 320000,
+            "sqft": 2526,
+            "iso_date": "2014-06-25",
+            "price_changed": 0,
+            "datasource_name": "JTHSMLS",
+            "listing_id": 589835966,
+            "listing": {
+                "last_status_change_date": "2014-09-15T07:00:00Z",
+                "photos": [
+                    {
+                        "href": "http://p.rdcpix.com/v02/l9974c644-m0s.jpg"
+                    },
+                    {
+                        "href": "http://p.rdcpix.com/v02/l9974c644-m1s.jpg"
+                    },
+                    {
+                        "href": "http://p.rdcpix.com/v02/l9974c644-m2s.jpg"
+                    },
+                    {
+                        "href": "http://p.rdcpix.com/v02/l9974c644-m3s.jpg"
+                    },
+                    {
+                        "href": "http://p.rdcpix.com/v03/l9974c644-m4s.jpg"
+                    },
+                    {
+                        "href": "http://p.rdcpix.com/v03/l9974c644-m5s.jpg"
+                    },
+                    {
+                        "href": "http://p.rdcpix.com/v03/l9974c644-m6s.jpg"
+                    },
+                    {
+                        "href": "http://p.rdcpix.com/v03/l9974c644-m7s.jpg"
+                    },
+                    {
+                        "href": "http://p.rdcpix.com/v03/l9974c644-m8s.jpg"
+                    },
+                    {
+                        "href": "http://p.rdcpix.com/v03/l9974c644-m9s.jpg"
+                    },
+                    {
+                        "href": "http://p.rdcpix.com/v03/l9974c644-m10s.jpg"
+                    },
+                    {
+                        "href": "http://p.rdcpix.com/v03/l9974c644-m11s.jpg"
+                    },
+                    {
+                        "href": "http://p.rdcpix.com/v02/l9974c644-m12s.jpg"
+                    },
+                    {
+                        "href": "http://p.rdcpix.com/v02/l9974c644-m13s.jpg"
+                    },
+                    {
+                        "href": "http://p.rdcpix.com/v02/l9974c644-m14s.jpg"
+                    },
+                    {
+                        "href": "http://p.rdcpix.com/v02/l9974c644-m15s.jpg"
+                    },
+                    {
+                        "href": "http://p.rdcpix.com/v02/l9974c644-m16s.jpg"
+                    },
+                    {
+                        "href": "http://p.rdcpix.com/v02/l9974c644-m17s.jpg"
+                    },
+                    {
+                        "href": "http://p.rdcpix.com/v02/l9974c644-m18s.jpg"
+                    },
+                    {
+                        "href": "http://p.rdcpix.com/v02/l9974c644-m19s.jpg"
+                    },
+                    {
+                        "href": "http://p.rdcpix.com/v01/l9974c644-m20s.jpg"
+                    },
+                    {
+                        "href": "http://p.rdcpix.com/v01/l9974c644-m21s.jpg"
+                    }
+                ],
+                "last_update_date": "2014-09-15T07:00:00Z",
+                "list_price": 365000,
+                "status": "sold",
+                "suppression_flags": null,
+                "advertisers": null,
+                "buyers": null,
+                "description": {
+                    "text": "Live in lovely Tequesta with easy access to shops, restaurants, galleries, worship, green markets and activities! Located on a cul-de-sac, this open plan opens to a tropical pool-patio backyard. Covered porch area adds to the entertainment area. 4 bedrooms, interior laundry room and Master Suite including private spa and sun area. 3 car garage plus utility/storage room. Stone fireplace in living room, separate kitchen with spacious breakfast area with new appliances. New water heater and washer. Newly renovated pool deck. Separate additional fenced yard. All measurements approximate."
+                },
+                "listing_id": "589835966",
+                "source": {
+                    "agents": [
+                        {
+                            "office_name": "Illustrated Properties",
+                            "type": "seller",
+                            "office_phone": "(561)622-5006",
+                            "agent_name": "Linda Cassidy",
+                            "agent_id": "30144362",
+                            "office_id": "606714"
+                        },
+                        {
+                            "office_name": "Crane Reed Properties, Llc",
+                            "type": "buyer",
+                            "office_phone": null,
+                            "agent_name": "Marguerite Wilson",
+                            "agent_id": "20018284",
+                            "office_id": "800109"
+                        }
+                    ],
+                    "id": "WPFL"
+                },
+                "list_date": "2014-06-25T07:00:00Z"
+            },
+            "price": 365000,
+            "price_range_max": null
+        },
+        {
+            "price_range_min": null,
+            "event_name": "Sold",
+            "date": "08/05/2013",
+            "source": "MLS #RX-3354874",
+            "sqft": 2526,
+            "iso_date": "2013-08-05",
+            "price_changed": -29888,
+            "datasource_name": "JTHSMLS",
+            "previous_event_price": 349888,
+            "listing": {
+                "last_status_change_date": "2013-08-05T07:00:00Z",
+                "photos": [
+                    {
+                        "href": "http://p.rdcpix.com/v02/lad9f4244-m0s.jpg"
+                    },
+                    {
+                        "href": "http://p.rdcpix.com/v02/lad9f4244-m1s.jpg"
+                    },
+                    {
+                        "href": "http://p.rdcpix.com/v02/lad9f4244-m2s.jpg"
+                    },
+                    {
+                        "href": "http://p.rdcpix.com/v02/lad9f4244-m3s.jpg"
+                    },
+                    {
+                        "href": "http://p.rdcpix.com/v02/lad9f4244-m4s.jpg"
+                    },
+                    {
+                        "href": "http://p.rdcpix.com/v02/lad9f4244-m5s.jpg"
+                    },
+                    {
+                        "href": "http://p.rdcpix.com/v02/lad9f4244-m6s.jpg"
+                    },
+                    {
+                        "href": "http://p.rdcpix.com/v02/lad9f4244-m7s.jpg"
+                    },
+                    {
+                        "href": "http://p.rdcpix.com/v02/lad9f4244-m8s.jpg"
+                    },
+                    {
+                        "href": "http://p.rdcpix.com/v02/lad9f4244-m9s.jpg"
+                    },
+                    {
+                        "href": "http://p.rdcpix.com/v02/lad9f4244-m10s.jpg"
+                    },
+                    {
+                        "href": "http://p.rdcpix.com/v02/lad9f4244-m11s.jpg"
+                    },
+                    {
+                        "href": "http://p.rdcpix.com/v02/lad9f4244-m12s.jpg"
+                    },
+                    {
+                        "href": "http://p.rdcpix.com/v02/lad9f4244-m13s.jpg"
+                    },
+                    {
+                        "href": "http://p.rdcpix.com/v02/lad9f4244-m14s.jpg"
+                    },
+                    {
+                        "href": "http://p.rdcpix.com/v02/lad9f4244-m15s.jpg"
+                    },
+                    {
+                        "href": "http://p.rdcpix.com/v02/lad9f4244-m16s.jpg"
+                    },
+                    {
+                        "href": "http://p.rdcpix.com/v02/lad9f4244-m17s.jpg"
+                    },
+                    {
+                        "href": "http://p.rdcpix.com/v02/lad9f4244-m18s.jpg"
+                    },
+                    {
+                        "href": "http://p.rdcpix.com/v02/lad9f4244-m19s.jpg"
+                    },
+                    {
+                        "href": "http://p.rdcpix.com/v02/lad9f4244-m20s.jpg"
+                    },
+                    {
+                        "href": "http://p.rdcpix.com/v02/lad9f4244-m21s.jpg"
+                    },
+                    {
+                        "href": "http://p.rdcpix.com/v02/lad9f4244-m22s.jpg"
+                    },
+                    {
+                        "href": "http://p.rdcpix.com/v02/lad9f4244-m23s.jpg"
+                    },
+                    {
+                        "href": "http://p.rdcpix.com/v02/lad9f4244-m24s.jpg"
+                    }
+                ],
+                "last_update_date": "2013-08-05T07:00:00Z",
+                "list_price": 349888,
+                "status": "sold",
+                "suppression_flags": null,
+                "advertisers": null,
+                "buyers": null,
+                "description": {
+                    "text": "Fabulous open floor plan offering double door entry, neutral paint and tile for this lovely single story home with 4br, 2ba, 3cg on a cul-de-sac. Tons of room for outdoor entertaining with in ground pool, large patio and yard. When you enter into this beautiful home you will be embraced with the soaring cathedral ceiling accented by a stone wood burning fireplace with hearth, tube skylight, wall to wall pilot sliding glass doors, high hat lights and an open formal dining room. Split door leads you with the spacious kitchen with plenty of cabinet space, snack bar and a bright breakfast area. On the opposite side of the home you'll find a laundry room with utility sink and closet. Down the hall are three bedrooms with interior lighting closets and a caba... (See supplement for full remarks)"
+                },
+                "listing_id": "570059378",
+                "source": {
+                    "agents": [
+                        {
+                            "office_name": "Keller Williams Realty/P B",
+                            "type": "seller",
+                            "office_phone": "(561)656-2929",
+                            "agent_name": "Eric Pruitt",
+                            "agent_id": "40364652",
+                            "office_id": "607508"
+                        },
+                        {
+                            "office_name": "Illustrated Properties",
+                            "type": "buyer",
+                            "office_phone": null,
+                            "agent_name": "Linda Cassidy",
+                            "agent_id": "30144362",
+                            "office_id": "606714"
+                        }
+                    ],
+                    "id": "WPFL"
+                },
+                "list_date": "2013-03-25T07:00:00Z"
+            },
+            "price": 320000,
+            "price_range_max": null
+        },
+        {
+            "price_range_min": null,
+            "event_name": "Listed",
+            "date": "06/15/2013",
+            "source": "MLS #RX-3354874",
+            "previous_event_price": 349888,
+            "sqft": 2526,
+            "iso_date": "2013-06-15",
+            "price_changed": 0,
+            "datasource_name": "JTHSMLS",
+            "listing_id": 570059378,
+            "listing": {
+                "last_status_change_date": "2013-08-05T07:00:00Z",
+                "photos": [
+                    {
+                        "href": "http://p.rdcpix.com/v02/lad9f4244-m0s.jpg"
+                    },
+                    {
+                        "href": "http://p.rdcpix.com/v02/lad9f4244-m1s.jpg"
+                    },
+                    {
+                        "href": "http://p.rdcpix.com/v02/lad9f4244-m2s.jpg"
+                    },
+                    {
+                        "href": "http://p.rdcpix.com/v02/lad9f4244-m3s.jpg"
+                    },
+                    {
+                        "href": "http://p.rdcpix.com/v02/lad9f4244-m4s.jpg"
+                    },
+                    {
+                        "href": "http://p.rdcpix.com/v02/lad9f4244-m5s.jpg"
+                    },
+                    {
+                        "href": "http://p.rdcpix.com/v02/lad9f4244-m6s.jpg"
+                    },
+                    {
+                        "href": "http://p.rdcpix.com/v02/lad9f4244-m7s.jpg"
+                    },
+                    {
+                        "href": "http://p.rdcpix.com/v02/lad9f4244-m8s.jpg"
+                    },
+                    {
+                        "href": "http://p.rdcpix.com/v02/lad9f4244-m9s.jpg"
+                    },
+                    {
+                        "href": "http://p.rdcpix.com/v02/lad9f4244-m10s.jpg"
+                    },
+                    {
+                        "href": "http://p.rdcpix.com/v02/lad9f4244-m11s.jpg"
+                    },
+                    {
+                        "href": "http://p.rdcpix.com/v02/lad9f4244-m12s.jpg"
+                    },
+                    {
+                        "href": "http://p.rdcpix.com/v02/lad9f4244-m13s.jpg"
+                    },
+                    {
+                        "href": "http://p.rdcpix.com/v02/lad9f4244-m14s.jpg"
+                    },
+                    {
+                        "href": "http://p.rdcpix.com/v02/lad9f4244-m15s.jpg"
+                    },
+                    {
+                        "href": "http://p.rdcpix.com/v02/lad9f4244-m16s.jpg"
+                    },
+                    {
+                        "href": "http://p.rdcpix.com/v02/lad9f4244-m17s.jpg"
+                    },
+                    {
+                        "href": "http://p.rdcpix.com/v02/lad9f4244-m18s.jpg"
+                    },
+                    {
+                        "href": "http://p.rdcpix.com/v02/lad9f4244-m19s.jpg"
+                    },
+                    {
+                        "href": "http://p.rdcpix.com/v02/lad9f4244-m20s.jpg"
+                    },
+                    {
+                        "href": "http://p.rdcpix.com/v02/lad9f4244-m21s.jpg"
+                    },
+                    {
+                        "href": "http://p.rdcpix.com/v02/lad9f4244-m22s.jpg"
+                    },
+                    {
+                        "href": "http://p.rdcpix.com/v02/lad9f4244-m23s.jpg"
+                    },
+                    {
+                        "href": "http://p.rdcpix.com/v02/lad9f4244-m24s.jpg"
+                    }
+                ],
+                "last_update_date": "2013-08-05T07:00:00Z",
+                "list_price": 349888,
+                "status": "sold",
+                "suppression_flags": null,
+                "advertisers": null,
+                "buyers": null,
+                "description": {
+                    "text": "Fabulous open floor plan offering double door entry, neutral paint and tile for this lovely single story home with 4br, 2ba, 3cg on a cul-de-sac. Tons of room for outdoor entertaining with in ground pool, large patio and yard. When you enter into this beautiful home you will be embraced with the soaring cathedral ceiling accented by a stone wood burning fireplace with hearth, tube skylight, wall to wall pilot sliding glass doors, high hat lights and an open formal dining room. Split door leads you with the spacious kitchen with plenty of cabinet space, snack bar and a bright breakfast area. On the opposite side of the home you'll find a laundry room with utility sink and closet. Down the hall are three bedrooms with interior lighting closets and a caba... (See supplement for full remarks)"
+                },
+                "listing_id": "570059378",
+                "source": {
+                    "agents": [
+                        {
+                            "office_name": "Keller Williams Realty/P B",
+                            "type": "seller",
+                            "office_phone": "(561)656-2929",
+                            "agent_name": "Eric Pruitt",
+                            "agent_id": "40364652",
+                            "office_id": "607508"
+                        },
+                        {
+                            "office_name": "Illustrated Properties",
+                            "type": "buyer",
+                            "office_phone": null,
+                            "agent_name": "Linda Cassidy",
+                            "agent_id": "30144362",
+                            "office_id": "606714"
+                        }
+                    ],
+                    "id": "WPFL"
+                },
+                "list_date": "2013-03-25T07:00:00Z"
+            },
+            "price": 349888,
+            "price_range_max": null
+        },
+        {
+            "price_range_min": null,
+            "event_name": "Price Changed",
+            "date": "05/17/2013",
+            "source": "MLS #R3354874",
+            "sqft": 2526,
+            "iso_date": "2013-05-17",
+            "price_changed": -5000,
+            "datasource_name": "JTHSMLS",
+            "previous_event_price": 354888,
+            "listing": {
+                "last_status_change_date": "2013-06-15T07:00:00Z",
+                "photos": [
+                    {
+                        "href": "http://p.rdcpix.com/v04/lcf521d44-m0s.jpg"
+                    },
+                    {
+                        "href": "http://p.rdcpix.com/v04/lcf521d44-m1s.jpg"
+                    },
+                    {
+                        "href": "http://p.rdcpix.com/v04/lcf521d44-m2s.jpg"
+                    },
+                    {
+                        "href": "http://p.rdcpix.com/v04/lcf521d44-m3s.jpg"
+                    },
+                    {
+                        "href": "http://p.rdcpix.com/v04/lcf521d44-m4s.jpg"
+                    },
+                    {
+                        "href": "http://p.rdcpix.com/v04/lcf521d44-m5s.jpg"
+                    },
+                    {
+                        "href": "http://p.rdcpix.com/v04/lcf521d44-m6s.jpg"
+                    },
+                    {
+                        "href": "http://p.rdcpix.com/v04/lcf521d44-m7s.jpg"
+                    },
+                    {
+                        "href": "http://p.rdcpix.com/v04/lcf521d44-m8s.jpg"
+                    },
+                    {
+                        "href": "http://p.rdcpix.com/v04/lcf521d44-m9s.jpg"
+                    },
+                    {
+                        "href": "http://p.rdcpix.com/v04/lcf521d44-m10s.jpg"
+                    },
+                    {
+                        "href": "http://p.rdcpix.com/v04/lcf521d44-m11s.jpg"
+                    },
+                    {
+                        "href": "http://p.rdcpix.com/v04/lcf521d44-m12s.jpg"
+                    },
+                    {
+                        "href": "http://p.rdcpix.com/v04/lcf521d44-m13s.jpg"
+                    },
+                    {
+                        "href": "http://p.rdcpix.com/v04/lcf521d44-m14s.jpg"
+                    },
+                    {
+                        "href": "http://p.rdcpix.com/v04/lcf521d44-m15s.jpg"
+                    },
+                    {
+                        "href": "http://p.rdcpix.com/v04/lcf521d44-m16s.jpg"
+                    },
+                    {
+                        "href": "http://p.rdcpix.com/v04/lcf521d44-m17s.jpg"
+                    },
+                    {
+                        "href": "http://p.rdcpix.com/v04/lcf521d44-m18s.jpg"
+                    },
+                    {
+                        "href": "http://p.rdcpix.com/v04/lcf521d44-m19s.jpg"
+                    },
+                    {
+                        "href": "http://p.rdcpix.com/v04/lcf521d44-m20s.jpg"
+                    },
+                    {
+                        "href": "http://p.rdcpix.com/v04/lcf521d44-m21s.jpg"
+                    },
+                    {
+                        "href": "http://p.rdcpix.com/v04/lcf521d44-m22s.jpg"
+                    },
+                    {
+                        "href": "http://p.rdcpix.com/v04/lcf521d44-m23s.jpg"
+                    },
+                    {
+                        "href": "http://p.rdcpix.com/v04/lcf521d44-m24s.jpg"
+                    }
+                ],
+                "last_update_date": "2013-06-15T11:22:16Z",
+                "list_price": 349888,
+                "status": "off_market",
+                "suppression_flags": null,
+                "advertisers": null,
+                "buyers": null,
+                "description": {
+                    "text": "Fabulous open floor plan offering double door entry, neutral paint and tile for this lovely single story home with 4br, 2ba, 3cg on a cul-de-sac. Tons of room for outdoor entertaining with in ground pool, large patio and yard., When you enter into this beautiful home you will be embraced with the soaring cathedral ceiling accented by a stone wood burning fireplace with hearth, tube skylight, wall to wall pilot sliding glass doors, high hat lights and an open formal dining room.  Split door leads you with the spacious kitchen with plenty of cabinet space, snack bar and a bright breakfast area.   On the opposite side of the home you'll find a laundry room with utility sink and closet.  Down the hall are three bedrooms with interior lighting closets and a cabana bathroom.  At the end of the hall is the luxurious master bedroom that features a sitting area, double sliding glass doors overlooking the pool and a walk in closet. The unique feature in the master bath is a private outdoor jacuzzi.  You will enjoy entertaining around the in ground pool, on the large patio and in the backyard all fenced and with lovely tropical landscaping.  The 3 car garage also has a wonderful storage room with shelves. Pool resurfaced jan. 2013 marbletite, a/c ruud june 2010, trane july 2006. Exterior painted june 2011. Back patio has cable and phone jacks.  220v electric sub-panel in garage. The location of this home is close to the jupiter inlet and jupiter beach, abacoa town center-roger dean stadium, the gardens mall; 35 minutes to downtown west palm beach and the pbi airport."
+                },
+                "listing_id": "565628154",
+                "source": {
+                    "agents": [
+                        {
+                            "office_name": "Keller Williams Realty/P B",
+                            "type": "seller",
+                            "office_phone": "561-656-2929",
+                            "agent_name": "Eric Pruitt",
+                            "agent_id": "40364652",
+                            "office_id": "607508"
+                        }
+                    ],
+                    "id": "WPFL"
+                },
+                "list_date": "2013-03-25T07:00:00Z"
+            },
+            "price": 349888,
+            "price_range_max": null
+        },
+        {
+            "price_range_min": null,
+            "event_name": "Listed",
+            "date": "03/26/2013",
+            "source": "MLS #R3354874",
+            "previous_event_price": 354900,
+            "sqft": 2526,
+            "iso_date": "2013-03-26",
+            "price_changed": 0,
+            "datasource_name": "JTHSMLS",
+            "listing_id": 565628154,
+            "listing": {
+                "last_status_change_date": "2013-06-15T07:00:00Z",
+                "photos": [
+                    {
+                        "href": "http://p.rdcpix.com/v04/lcf521d44-m0s.jpg"
+                    },
+                    {
+                        "href": "http://p.rdcpix.com/v04/lcf521d44-m1s.jpg"
+                    },
+                    {
+                        "href": "http://p.rdcpix.com/v04/lcf521d44-m2s.jpg"
+                    },
+                    {
+                        "href": "http://p.rdcpix.com/v04/lcf521d44-m3s.jpg"
+                    },
+                    {
+                        "href": "http://p.rdcpix.com/v04/lcf521d44-m4s.jpg"
+                    },
+                    {
+                        "href": "http://p.rdcpix.com/v04/lcf521d44-m5s.jpg"
+                    },
+                    {
+                        "href": "http://p.rdcpix.com/v04/lcf521d44-m6s.jpg"
+                    },
+                    {
+                        "href": "http://p.rdcpix.com/v04/lcf521d44-m7s.jpg"
+                    },
+                    {
+                        "href": "http://p.rdcpix.com/v04/lcf521d44-m8s.jpg"
+                    },
+                    {
+                        "href": "http://p.rdcpix.com/v04/lcf521d44-m9s.jpg"
+                    },
+                    {
+                        "href": "http://p.rdcpix.com/v04/lcf521d44-m10s.jpg"
+                    },
+                    {
+                        "href": "http://p.rdcpix.com/v04/lcf521d44-m11s.jpg"
+                    },
+                    {
+                        "href": "http://p.rdcpix.com/v04/lcf521d44-m12s.jpg"
+                    },
+                    {
+                        "href": "http://p.rdcpix.com/v04/lcf521d44-m13s.jpg"
+                    },
+                    {
+                        "href": "http://p.rdcpix.com/v04/lcf521d44-m14s.jpg"
+                    },
+                    {
+                        "href": "http://p.rdcpix.com/v04/lcf521d44-m15s.jpg"
+                    },
+                    {
+                        "href": "http://p.rdcpix.com/v04/lcf521d44-m16s.jpg"
+                    },
+                    {
+                        "href": "http://p.rdcpix.com/v04/lcf521d44-m17s.jpg"
+                    },
+                    {
+                        "href": "http://p.rdcpix.com/v04/lcf521d44-m18s.jpg"
+                    },
+                    {
+                        "href": "http://p.rdcpix.com/v04/lcf521d44-m19s.jpg"
+                    },
+                    {
+                        "href": "http://p.rdcpix.com/v04/lcf521d44-m20s.jpg"
+                    },
+                    {
+                        "href": "http://p.rdcpix.com/v04/lcf521d44-m21s.jpg"
+                    },
+                    {
+                        "href": "http://p.rdcpix.com/v04/lcf521d44-m22s.jpg"
+                    },
+                    {
+                        "href": "http://p.rdcpix.com/v04/lcf521d44-m23s.jpg"
+                    },
+                    {
+                        "href": "http://p.rdcpix.com/v04/lcf521d44-m24s.jpg"
+                    }
+                ],
+                "last_update_date": "2013-06-15T11:22:16Z",
+                "list_price": 349888,
+                "status": "off_market",
+                "suppression_flags": null,
+                "advertisers": null,
+                "buyers": null,
+                "description": {
+                    "text": "Fabulous open floor plan offering double door entry, neutral paint and tile for this lovely single story home with 4br, 2ba, 3cg on a cul-de-sac. Tons of room for outdoor entertaining with in ground pool, large patio and yard., When you enter into this beautiful home you will be embraced with the soaring cathedral ceiling accented by a stone wood burning fireplace with hearth, tube skylight, wall to wall pilot sliding glass doors, high hat lights and an open formal dining room.  Split door leads you with the spacious kitchen with plenty of cabinet space, snack bar and a bright breakfast area.   On the opposite side of the home you'll find a laundry room with utility sink and closet.  Down the hall are three bedrooms with interior lighting closets and a cabana bathroom.  At the end of the hall is the luxurious master bedroom that features a sitting area, double sliding glass doors overlooking the pool and a walk in closet. The unique feature in the master bath is a private outdoor jacuzzi.  You will enjoy entertaining around the in ground pool, on the large patio and in the backyard all fenced and with lovely tropical landscaping.  The 3 car garage also has a wonderful storage room with shelves. Pool resurfaced jan. 2013 marbletite, a/c ruud june 2010, trane july 2006. Exterior painted june 2011. Back patio has cable and phone jacks.  220v electric sub-panel in garage. The location of this home is close to the jupiter inlet and jupiter beach, abacoa town center-roger dean stadium, the gardens mall; 35 minutes to downtown west palm beach and the pbi airport."
+                },
+                "listing_id": "565628154",
+                "source": {
+                    "agents": [
+                        {
+                            "office_name": "Keller Williams Realty/P B",
+                            "type": "seller",
+                            "office_phone": "561-656-2929",
+                            "agent_name": "Eric Pruitt",
+                            "agent_id": "40364652",
+                            "office_id": "607508"
+                        }
+                    ],
+                    "id": "WPFL"
+                },
+                "list_date": "2013-03-25T07:00:00Z"
+            },
+            "price": 354888,
+            "price_range_max": null
+        },
+        {
+            "price_range_min": null,
+            "event_name": "Listed",
+            "date": "04/26/2012",
+            "source": "MLS #R3277226",
+            "sqft": 2526,
+            "iso_date": "2012-04-26",
+            "price_changed": 0,
+            "datasource_name": "JTHSMLS",
+            "listing_id": 551973414,
+            "listing": {
+                "last_status_change_date": "2012-11-27T12:29:00Z",
+                "photos": [
+                    {
+                        "href": "http://p.rdcpix.com/v07/lc168ae43-m0s.jpg"
+                    },
+                    {
+                        "href": "http://p.rdcpix.com/v07/lc168ae43-m1s.jpg"
+                    },
+                    {
+                        "href": "http://p.rdcpix.com/v07/lc168ae43-m2s.jpg"
+                    },
+                    {
+                        "href": "http://p.rdcpix.com/v07/lc168ae43-m3s.jpg"
+                    },
+                    {
+                        "href": "http://p.rdcpix.com/v07/lc168ae43-m4s.jpg"
+                    },
+                    {
+                        "href": "http://p.rdcpix.com/v07/lc168ae43-m5s.jpg"
+                    },
+                    {
+                        "href": "http://p.rdcpix.com/v07/lc168ae43-m6s.jpg"
+                    },
+                    {
+                        "href": "http://p.rdcpix.com/v07/lc168ae43-m7s.jpg"
+                    },
+                    {
+                        "href": "http://p.rdcpix.com/v07/lc168ae43-m8s.jpg"
+                    },
+                    {
+                        "href": "http://p.rdcpix.com/v07/lc168ae43-m9s.jpg"
+                    },
+                    {
+                        "href": "http://p.rdcpix.com/v07/lc168ae43-m10s.jpg"
+                    },
+                    {
+                        "href": "http://p.rdcpix.com/v07/lc168ae43-m11s.jpg"
+                    },
+                    {
+                        "href": "http://p.rdcpix.com/v07/lc168ae43-m12s.jpg"
+                    },
+                    {
+                        "href": "http://p.rdcpix.com/v07/lc168ae43-m13s.jpg"
+                    },
+                    {
+                        "href": "http://p.rdcpix.com/v07/lc168ae43-m14s.jpg"
+                    },
+                    {
+                        "href": "http://p.rdcpix.com/v07/lc168ae43-m15s.jpg"
+                    },
+                    {
+                        "href": "http://p.rdcpix.com/v07/lc168ae43-m16s.jpg"
+                    },
+                    {
+                        "href": "http://p.rdcpix.com/v07/lc168ae43-m17s.jpg"
+                    },
+                    {
+                        "href": "http://p.rdcpix.com/v07/lc168ae43-m18s.jpg"
+                    },
+                    {
+                        "href": "http://p.rdcpix.com/v07/lc168ae43-m19s.jpg"
+                    },
+                    {
+                        "href": "http://p.rdcpix.com/v07/lc168ae43-m20s.jpg"
+                    },
+                    {
+                        "href": "http://p.rdcpix.com/v07/lc168ae43-m21s.jpg"
+                    },
+                    {
+                        "href": "http://p.rdcpix.com/v07/lc168ae43-m22s.jpg"
+                    },
+                    {
+                        "href": "http://p.rdcpix.com/v07/lc168ae43-m23s.jpg"
+                    },
+                    {
+                        "href": "http://p.rdcpix.com/v07/lc168ae43-m24s.jpg"
+                    }
+                ],
+                "last_update_date": "2012-12-27T23:54:00Z",
+                "list_price": 354900,
+                "status": "off_market",
+                "suppression_flags": null,
+                "advertisers": null,
+                "buyers": null,
+                "description": {
+                    "text": null
+                },
+                "listing_id": "551973414",
+                "source": {
+                    "agents": [
+                        {
+                            "office_name": "Water Vista Realty, Llc",
+                            "type": "seller",
+                            "office_phone": "(561)427-4941",
+                            "agent_name": "Daniel Cloud",
+                            "agent_id": "20004205",
+                            "office_id": "802056"
+                        }
+                    ],
+                    "id": "WPFL"
+                },
+                "list_date": "2012-04-26T09:18:00Z"
+            },
+            "price": 354900,
+            "price_range_max": null
+        }
+    ],
+    "broker": {
+        "name": "Illustrated Properties- Abacoa",
+        "advertiser_id": 842582,
+        "phone1": {
+            "number": "5612202148",
+            "type": "broker"
+        }
+    },
+    "photo_count": 25,
+    "schools": [
+        {
+            "grades": {
+                "range": {
+                    "high": "5",
+                    "low": "K"
+                }
+            },
+            "distance_in_miles": 2.8,
+            "relevance": "assigned",
+            "id": "0717175901",
+            "ratings": {
+                "parent_rating": 4,
+                "great_schools_rating": 7
+            },
+            "name": "Limestone Creek Elementary School",
+            "phone": "(561) 741-9200",
+            "funding_type": "public",
+            "greatschools_id": "1202313",
+            "lat": 26.943436,
+            "lon": -80.136723,
+            "student_teacher_ratio": 15.7,
+            "education_levels": [
+                "elementary"
+            ],
+            "student_count": 1035,
+            "location": {
+                "postal_code": "33458",
+                "state": "FL",
+                "street": "6701 Church Street",
+                "city": "Jupiter",
+                "city_slug_id": "Jupiter_FL",
+                "county": "Palm Beach County"
+            },
+            "nces_id": "120150002696"
+        },
+        {
+            "grades": {
+                "range": {
+                    "high": "8",
+                    "low": "6"
+                }
+            },
+            "distance_in_miles": 4.3,
+            "relevance": "assigned",
+            "id": "0717175511",
+            "ratings": {
+                "parent_rating": 2,
+                "great_schools_rating": 5
+            },
+            "name": "Jupiter Middle School",
+            "phone": "(561) 745-7200",
+            "funding_type": "public",
+            "greatschools_id": "1202286",
+            "lat": 26.903577,
+            "lon": -80.104073,
+            "student_teacher_ratio": 17,
+            "education_levels": [
+                "middle"
+            ],
+            "student_count": 1435,
+            "location": {
+                "postal_code": "33458",
+                "state": "FL",
+                "street": "15245 Military Trail",
+                "city": "Jupiter",
+                "city_slug_id": "Jupiter_FL",
+                "county": "Palm Beach County"
+            },
+            "nces_id": "120150002375"
+        },
+        {
+            "grades": {
+                "range": {
+                    "high": "12",
+                    "low": "9"
+                }
+            },
+            "distance_in_miles": 2.6,
+            "relevance": "assigned",
+            "id": "0717174441",
+            "ratings": {
+                "parent_rating": 3,
+                "great_schools_rating": 7
+            },
+            "name": "Jupiter High School",
+            "phone": "(561) 744-7900",
+            "funding_type": "public",
+            "greatschools_id": "1202212",
+            "lat": 26.928053,
+            "lon": -80.104894,
+            "student_teacher_ratio": 18.6,
+            "education_levels": [
+                "high"
+            ],
+            "student_count": 3139,
+            "location": {
+                "postal_code": "33458",
+                "state": "FL",
+                "street": "500 Military Trail",
+                "city": "Jupiter",
+                "city_slug_id": "Jupiter_FL",
+                "county": "Palm Beach County"
+            },
+            "nces_id": "120150001477"
+        },
+        {
+            "grades": {
+                "range": {
+                    "high": "5",
+                    "low": "K"
+                }
+            },
+            "distance_in_miles": 2.3,
+            "relevance": "nearby",
+            "id": "0717174431",
+            "ratings": {
+                "parent_rating": 4,
+                "great_schools_rating": 6
+            },
+            "name": "Jupiter Elementary School",
+            "phone": "(561) 741-5300",
+            "funding_type": "public",
+            "greatschools_id": "1202211",
+            "lat": 26.932198,
+            "lon": -80.100357,
+            "student_teacher_ratio": 14.6,
+            "education_levels": [
+                "elementary"
+            ],
+            "student_count": 930,
+            "location": {
+                "postal_code": "33458",
+                "state": "FL",
+                "street": "200 South Loxahatchee Drive",
+                "city": "Jupiter",
+                "city_slug_id": "Jupiter_FL",
+                "county": "Palm Beach County"
+            },
+            "nces_id": "120150001476"
+        },
+        {
+            "distance_in_miles": 2.5,
+            "relevance": "nearby",
+            "id": "0717250621",
+            "ratings": {
+                "parent_rating": null,
+                "great_schools_rating": null
+            },
+            "name": "Jupiter High Adult Education Center",
+            "funding_type": "public",
+            "phone": "(561) 744-7931",
+            "lat": 26.929165,
+            "lon": -80.104477,
+            "greatschools_id": "1207544",
+            "education_levels": [
+                "elementary",
+                "middle",
+                "high"
+            ],
+            "student_count": 0,
+            "location": {
+                "postal_code": "33458",
+                "state": "FL",
+                "street": "500 Military Trail",
+                "city": "Jupiter",
+                "city_slug_id": "Jupiter_FL",
+                "county": "Palm Beach"
+            },
+            "nces_id": "120150007216"
+        },
+        {
+            "grades": {
+                "range": {
+                    "high": "12",
+                    "low": "9"
+                }
+            },
+            "distance_in_miles": 6.1,
+            "relevance": "nearby",
+            "id": "0717176061",
+            "ratings": {
+                "parent_rating": 3,
+                "great_schools_rating": 5
+            },
+            "name": "William T. Dwyer High School",
+            "phone": "(561) 625-7800",
+            "funding_type": "public",
+            "greatschools_id": "1202326",
+            "lat": 26.87701,
+            "lon": -80.105288,
+            "student_teacher_ratio": 18.3,
+            "education_levels": [
+                "high"
+            ],
+            "student_count": 2317,
+            "location": {
+                "postal_code": "33410",
+                "state": "FL",
+                "street": "13601 North Military Trail",
+                "city": "Palm Beach Gardens",
+                "city_slug_id": "Palm-Beach-Gardens_FL",
+                "county": "Palm Beach County"
+            },
+            "nces_id": "120150002877"
+        },
+        {
+            "distance_in_miles": 0.5,
+            "relevance": "nearby",
+            "id": "0717202411",
+            "ratings": {
+                "parent_rating": 5,
+                "great_schools_rating": null
+            },
+            "name": "Good Shepherd Episcopal School",
+            "grades": {
+                "range": {
+                    "high": "5",
+                    "low": "PK"
+                }
+            },
+            "funding_type": "private",
+            "phone": "(561) 746-5507",
+            "lat": 26.95999,
+            "lon": -80.093678,
+            "greatschools_id": "1204169",
+            "education_levels": [
+                "elementary"
+            ],
+            "student_count": 113,
+            "location": {
+                "postal_code": "33469",
+                "state": "FL",
+                "street": "402 Seabrook Road",
+                "city": "Tequesta",
+                "city_slug_id": "Tequesta_FL",
+                "county": "Palm Beach County"
+            },
+            "nces_id": "A9705479"
+        },
+        {
+            "distance_in_miles": 1.1,
+            "relevance": "nearby",
+            "id": "0717422061",
+            "ratings": {
+                "parent_rating": null,
+                "great_schools_rating": null
+            },
+            "name": "Providence Education Group LLC",
+            "grades": {
+                "range": {
+                    "high": "11",
+                    "low": "1"
+                }
+            },
+            "funding_type": "private",
+            "phone": "(561) 906-8624",
+            "lat": 26.978008,
+            "lon": -80.10936,
+            "greatschools_id": "1219546",
+            "education_levels": [
+                "elementary",
+                "middle",
+                "high"
+            ],
+            "student_count": 40,
+            "location": {
+                "postal_code": "33469",
+                "state": "FL",
+                "street": "395 TEQUESTA DR STE B1",
+                "city": "Tequesta",
+                "city_slug_id": "Tequesta_FL",
+                "county": "PALM BEACH"
+            },
+            "nces_id": "A1701140"
+        }
+    ],
+    "listings": [
+        {
+            "photos": {},
+            "selling_agent_name": "Linda Cassidy",
+            "selling_office_url": "",
+            "selling_office_id": "606714",
+            "client_flags": {
+                "is_price_reduced": false,
+                "is_tcpa_message_enabled": false,
+                "is_newly_listed": false
+            },
+            "selling_agent_id": "30144362",
+            "lead_forms": [
+                {
+                    "show_contact_an_agent": true,
+                    "google_cashback_enabled": false,
+                    "form_type": "classic",
+                    "smarthome_enabled": false,
+                    "show_contact_a_lender": false,
+                    "lead_type": "co_broke",
+                    "cashback_enabled": false,
+                    "is_lcm_enabled": false,
+                    "show_text_leads": true,
+                    "show_veterans_united": false,
+                    "flip_the_market_enabled": false
+                }
+            ],
+            "selling_office_name": "Illustrated Properties",
+            "description": "Live in lovely Tequesta with easy access to shops, restaurants, galleries, worship, green markets and activities! Located on a cul-de-sac, this open plan opens to a tropical pool-patio backyard. Covered porch area adds to the entertainment area. 4 bedrooms, interior laundry room and Master Suite including private spa and sun area. 3 car garage plus utility/storage room. Stone fireplace in living room, separate kitchen with spacious breakfast area with new appliances. New water heater and washer. Newly renovated pool deck. Separate additional fenced yard. All measurements approximate.",
+            "listing_id": 629289378,
+            "mls_id": "BEFL",
+            "listing_status": "Sold",
+            "selling_agent_url": ""
+        },
+        {
+            "photos": [
+                {
+                    "href": "http://p.rdcpix.com/v02/l9974c644-m0s.jpg"
+                },
+                {
+                    "href": "http://p.rdcpix.com/v02/l9974c644-m1s.jpg"
+                },
+                {
+                    "href": "http://p.rdcpix.com/v02/l9974c644-m2s.jpg"
+                },
+                {
+                    "href": "http://p.rdcpix.com/v02/l9974c644-m3s.jpg"
+                },
+                {
+                    "href": "http://p.rdcpix.com/v03/l9974c644-m4s.jpg"
+                },
+                {
+                    "href": "http://p.rdcpix.com/v03/l9974c644-m5s.jpg"
+                },
+                {
+                    "href": "http://p.rdcpix.com/v03/l9974c644-m6s.jpg"
+                },
+                {
+                    "href": "http://p.rdcpix.com/v03/l9974c644-m7s.jpg"
+                },
+                {
+                    "href": "http://p.rdcpix.com/v03/l9974c644-m8s.jpg"
+                },
+                {
+                    "href": "http://p.rdcpix.com/v03/l9974c644-m9s.jpg"
+                },
+                {
+                    "href": "http://p.rdcpix.com/v03/l9974c644-m10s.jpg"
+                },
+                {
+                    "href": "http://p.rdcpix.com/v03/l9974c644-m11s.jpg"
+                },
+                {
+                    "href": "http://p.rdcpix.com/v02/l9974c644-m12s.jpg"
+                },
+                {
+                    "href": "http://p.rdcpix.com/v02/l9974c644-m13s.jpg"
+                },
+                {
+                    "href": "http://p.rdcpix.com/v02/l9974c644-m14s.jpg"
+                },
+                {
+                    "href": "http://p.rdcpix.com/v02/l9974c644-m15s.jpg"
+                },
+                {
+                    "href": "http://p.rdcpix.com/v02/l9974c644-m16s.jpg"
+                },
+                {
+                    "href": "http://p.rdcpix.com/v02/l9974c644-m17s.jpg"
+                },
+                {
+                    "href": "http://p.rdcpix.com/v02/l9974c644-m18s.jpg"
+                },
+                {
+                    "href": "http://p.rdcpix.com/v02/l9974c644-m19s.jpg"
+                },
+                {
+                    "href": "http://p.rdcpix.com/v01/l9974c644-m20s.jpg"
+                },
+                {
+                    "href": "http://p.rdcpix.com/v01/l9974c644-m21s.jpg"
+                }
+            ],
+            "selling_agent_name": "Linda Cassidy",
+            "selling_office_url": "",
+            "selling_office_id": "606714",
+            "client_flags": {
+                "is_price_reduced": false,
+                "is_tcpa_message_enabled": false,
+                "is_newly_listed": false
+            },
+            "selling_agent_id": "30144362",
+            "lead_forms": [
+                {
+                    "show_contact_an_agent": true,
+                    "google_cashback_enabled": false,
+                    "form_type": "classic",
+                    "smarthome_enabled": false,
+                    "show_contact_a_lender": false,
+                    "lead_type": "co_broke",
+                    "cashback_enabled": false,
+                    "is_lcm_enabled": false,
+                    "show_text_leads": true,
+                    "show_veterans_united": false,
+                    "flip_the_market_enabled": false
+                }
+            ],
+            "selling_office_name": "Illustrated Properties",
+            "description": "Live in lovely Tequesta with easy access to shops, restaurants, galleries, worship, green markets and activities! Located on a cul-de-sac, this open plan opens to a tropical pool-patio backyard. Covered porch area adds to the entertainment area. 4 bedrooms, interior laundry room and Master Suite including private spa and sun area. 3 car garage plus utility/storage room. Stone fireplace in living room, separate kitchen with spacious breakfast area with new appliances. New water heater and washer. Newly renovated pool deck. Separate additional fenced yard. All measurements approximate.",
+            "listing_id": 589835966,
+            "mls_id": "WPFL",
+            "listing_status": "Sold",
+            "selling_agent_url": ""
+        },
+        {
+            "photos": [
+                {
+                    "href": "http://p.rdcpix.com/v02/lad9f4244-m0s.jpg"
+                },
+                {
+                    "href": "http://p.rdcpix.com/v02/lad9f4244-m1s.jpg"
+                },
+                {
+                    "href": "http://p.rdcpix.com/v02/lad9f4244-m2s.jpg"
+                },
+                {
+                    "href": "http://p.rdcpix.com/v02/lad9f4244-m3s.jpg"
+                },
+                {
+                    "href": "http://p.rdcpix.com/v02/lad9f4244-m4s.jpg"
+                },
+                {
+                    "href": "http://p.rdcpix.com/v02/lad9f4244-m5s.jpg"
+                },
+                {
+                    "href": "http://p.rdcpix.com/v02/lad9f4244-m6s.jpg"
+                },
+                {
+                    "href": "http://p.rdcpix.com/v02/lad9f4244-m7s.jpg"
+                },
+                {
+                    "href": "http://p.rdcpix.com/v02/lad9f4244-m8s.jpg"
+                },
+                {
+                    "href": "http://p.rdcpix.com/v02/lad9f4244-m9s.jpg"
+                },
+                {
+                    "href": "http://p.rdcpix.com/v02/lad9f4244-m10s.jpg"
+                },
+                {
+                    "href": "http://p.rdcpix.com/v02/lad9f4244-m11s.jpg"
+                },
+                {
+                    "href": "http://p.rdcpix.com/v02/lad9f4244-m12s.jpg"
+                },
+                {
+                    "href": "http://p.rdcpix.com/v02/lad9f4244-m13s.jpg"
+                },
+                {
+                    "href": "http://p.rdcpix.com/v02/lad9f4244-m14s.jpg"
+                },
+                {
+                    "href": "http://p.rdcpix.com/v02/lad9f4244-m15s.jpg"
+                },
+                {
+                    "href": "http://p.rdcpix.com/v02/lad9f4244-m16s.jpg"
+                },
+                {
+                    "href": "http://p.rdcpix.com/v02/lad9f4244-m17s.jpg"
+                },
+                {
+                    "href": "http://p.rdcpix.com/v02/lad9f4244-m18s.jpg"
+                },
+                {
+                    "href": "http://p.rdcpix.com/v02/lad9f4244-m19s.jpg"
+                },
+                {
+                    "href": "http://p.rdcpix.com/v02/lad9f4244-m20s.jpg"
+                },
+                {
+                    "href": "http://p.rdcpix.com/v02/lad9f4244-m21s.jpg"
+                },
+                {
+                    "href": "http://p.rdcpix.com/v02/lad9f4244-m22s.jpg"
+                },
+                {
+                    "href": "http://p.rdcpix.com/v02/lad9f4244-m23s.jpg"
+                },
+                {
+                    "href": "http://p.rdcpix.com/v02/lad9f4244-m24s.jpg"
+                }
+            ],
+            "selling_agent_name": "Eric Pruitt",
+            "selling_office_url": "",
+            "selling_office_id": "607508",
+            "client_flags": {
+                "is_price_reduced": false,
+                "is_tcpa_message_enabled": false,
+                "is_newly_listed": false
+            },
+            "selling_agent_id": "40364652",
+            "lead_forms": [
+                {
+                    "show_contact_an_agent": true,
+                    "google_cashback_enabled": false,
+                    "form_type": "classic",
+                    "smarthome_enabled": false,
+                    "show_contact_a_lender": false,
+                    "lead_type": "co_broke",
+                    "cashback_enabled": false,
+                    "is_lcm_enabled": false,
+                    "show_text_leads": true,
+                    "show_veterans_united": false,
+                    "flip_the_market_enabled": false
+                }
+            ],
+            "selling_office_name": "Keller Williams Realty/P B",
+            "description": "Fabulous open floor plan offering double door entry, neutral paint and tile for this lovely single story home with 4br, 2ba, 3cg on a cul-de-sac. Tons of room for outdoor entertaining with in ground pool, large patio and yard. When you enter into this beautiful home you will be embraced with the soaring cathedral ceiling accented by a stone wood burning fireplace with hearth, tube skylight, wall to wall pilot sliding glass doors, high hat lights and an open formal dining room. Split door leads you with the spacious kitchen with plenty of cabinet space, snack bar and a bright breakfast area. On the opposite side of the home you'll find a laundry room with utility sink and closet. Down the hall are three bedrooms with interior lighting closets and a caba... (See supplement for full remarks)",
+            "listing_id": 570059378,
+            "mls_id": "WPFL",
+            "listing_status": "Sold",
+            "selling_agent_url": ""
+        },
+        {
+            "photos": [
+                {
+                    "href": "http://p.rdcpix.com/v04/lcf521d44-m0s.jpg"
+                },
+                {
+                    "href": "http://p.rdcpix.com/v04/lcf521d44-m1s.jpg"
+                },
+                {
+                    "href": "http://p.rdcpix.com/v04/lcf521d44-m2s.jpg"
+                },
+                {
+                    "href": "http://p.rdcpix.com/v04/lcf521d44-m3s.jpg"
+                },
+                {
+                    "href": "http://p.rdcpix.com/v04/lcf521d44-m4s.jpg"
+                },
+                {
+                    "href": "http://p.rdcpix.com/v04/lcf521d44-m5s.jpg"
+                },
+                {
+                    "href": "http://p.rdcpix.com/v04/lcf521d44-m6s.jpg"
+                },
+                {
+                    "href": "http://p.rdcpix.com/v04/lcf521d44-m7s.jpg"
+                },
+                {
+                    "href": "http://p.rdcpix.com/v04/lcf521d44-m8s.jpg"
+                },
+                {
+                    "href": "http://p.rdcpix.com/v04/lcf521d44-m9s.jpg"
+                },
+                {
+                    "href": "http://p.rdcpix.com/v04/lcf521d44-m10s.jpg"
+                },
+                {
+                    "href": "http://p.rdcpix.com/v04/lcf521d44-m11s.jpg"
+                },
+                {
+                    "href": "http://p.rdcpix.com/v04/lcf521d44-m12s.jpg"
+                },
+                {
+                    "href": "http://p.rdcpix.com/v04/lcf521d44-m13s.jpg"
+                },
+                {
+                    "href": "http://p.rdcpix.com/v04/lcf521d44-m14s.jpg"
+                },
+                {
+                    "href": "http://p.rdcpix.com/v04/lcf521d44-m15s.jpg"
+                },
+                {
+                    "href": "http://p.rdcpix.com/v04/lcf521d44-m16s.jpg"
+                },
+                {
+                    "href": "http://p.rdcpix.com/v04/lcf521d44-m17s.jpg"
+                },
+                {
+                    "href": "http://p.rdcpix.com/v04/lcf521d44-m18s.jpg"
+                },
+                {
+                    "href": "http://p.rdcpix.com/v04/lcf521d44-m19s.jpg"
+                },
+                {
+                    "href": "http://p.rdcpix.com/v04/lcf521d44-m20s.jpg"
+                },
+                {
+                    "href": "http://p.rdcpix.com/v04/lcf521d44-m21s.jpg"
+                },
+                {
+                    "href": "http://p.rdcpix.com/v04/lcf521d44-m22s.jpg"
+                },
+                {
+                    "href": "http://p.rdcpix.com/v04/lcf521d44-m23s.jpg"
+                },
+                {
+                    "href": "http://p.rdcpix.com/v04/lcf521d44-m24s.jpg"
+                }
+            ],
+            "selling_agent_name": "Eric Pruitt",
+            "selling_office_url": "",
+            "selling_office_id": "607508",
+            "client_flags": {
+                "is_price_reduced": false,
+                "is_tcpa_message_enabled": false,
+                "is_newly_listed": false
+            },
+            "selling_agent_id": "40364652",
+            "lead_forms": [
+                {
+                    "show_contact_an_agent": true,
+                    "google_cashback_enabled": false,
+                    "form_type": "classic",
+                    "smarthome_enabled": false,
+                    "show_contact_a_lender": false,
+                    "lead_type": "co_broke",
+                    "cashback_enabled": false,
+                    "is_lcm_enabled": false,
+                    "show_text_leads": true,
+                    "show_veterans_united": false,
+                    "flip_the_market_enabled": false
+                }
+            ],
+            "selling_office_name": "Keller Williams Realty/P B",
+            "description": "Fabulous open floor plan offering double door entry, neutral paint and tile for this lovely single story home with 4br, 2ba, 3cg on a cul-de-sac. Tons of room for outdoor entertaining with in ground pool, large patio and yard., When you enter into this beautiful home you will be embraced with the soaring cathedral ceiling accented by a stone wood burning fireplace with hearth, tube skylight, wall to wall pilot sliding glass doors, high hat lights and an open formal dining room.  Split door leads you with the spacious kitchen with plenty of cabinet space, snack bar and a bright breakfast area.   On the opposite side of the home you'll find a laundry room with utility sink and closet.  Down the hall are three bedrooms with interior lighting closets and a cabana bathroom.  At the end of the hall is the luxurious master bedroom that features a sitting area, double sliding glass doors overlooking the pool and a walk in closet. The unique feature in the master bath is a private outdoor jacuzzi.  You will enjoy entertaining around the in ground pool, on the large patio and in the backyard all fenced and with lovely tropical landscaping.  The 3 car garage also has a wonderful storage room with shelves. Pool resurfaced jan. 2013 marbletite, a/c ruud june 2010, trane july 2006. Exterior painted june 2011. Back patio has cable and phone jacks.  220v electric sub-panel in garage. The location of this home is close to the jupiter inlet and jupiter beach, abacoa town center-roger dean stadium, the gardens mall; 35 minutes to downtown west palm beach and the pbi airport.",
+            "listing_id": 565628154,
+            "mls_id": "WPFL",
+            "listing_status": "OffMarket",
+            "selling_agent_url": ""
+        },
+        {
+            "photos": [
+                {
+                    "href": "http://p.rdcpix.com/v07/lc168ae43-m0s.jpg"
+                },
+                {
+                    "href": "http://p.rdcpix.com/v07/lc168ae43-m1s.jpg"
+                },
+                {
+                    "href": "http://p.rdcpix.com/v07/lc168ae43-m2s.jpg"
+                },
+                {
+                    "href": "http://p.rdcpix.com/v07/lc168ae43-m3s.jpg"
+                },
+                {
+                    "href": "http://p.rdcpix.com/v07/lc168ae43-m4s.jpg"
+                },
+                {
+                    "href": "http://p.rdcpix.com/v07/lc168ae43-m5s.jpg"
+                },
+                {
+                    "href": "http://p.rdcpix.com/v07/lc168ae43-m6s.jpg"
+                },
+                {
+                    "href": "http://p.rdcpix.com/v07/lc168ae43-m7s.jpg"
+                },
+                {
+                    "href": "http://p.rdcpix.com/v07/lc168ae43-m8s.jpg"
+                },
+                {
+                    "href": "http://p.rdcpix.com/v07/lc168ae43-m9s.jpg"
+                },
+                {
+                    "href": "http://p.rdcpix.com/v07/lc168ae43-m10s.jpg"
+                },
+                {
+                    "href": "http://p.rdcpix.com/v07/lc168ae43-m11s.jpg"
+                },
+                {
+                    "href": "http://p.rdcpix.com/v07/lc168ae43-m12s.jpg"
+                },
+                {
+                    "href": "http://p.rdcpix.com/v07/lc168ae43-m13s.jpg"
+                },
+                {
+                    "href": "http://p.rdcpix.com/v07/lc168ae43-m14s.jpg"
+                },
+                {
+                    "href": "http://p.rdcpix.com/v07/lc168ae43-m15s.jpg"
+                },
+                {
+                    "href": "http://p.rdcpix.com/v07/lc168ae43-m16s.jpg"
+                },
+                {
+                    "href": "http://p.rdcpix.com/v07/lc168ae43-m17s.jpg"
+                },
+                {
+                    "href": "http://p.rdcpix.com/v07/lc168ae43-m18s.jpg"
+                },
+                {
+                    "href": "http://p.rdcpix.com/v07/lc168ae43-m19s.jpg"
+                },
+                {
+                    "href": "http://p.rdcpix.com/v07/lc168ae43-m20s.jpg"
+                },
+                {
+                    "href": "http://p.rdcpix.com/v07/lc168ae43-m21s.jpg"
+                },
+                {
+                    "href": "http://p.rdcpix.com/v07/lc168ae43-m22s.jpg"
+                },
+                {
+                    "href": "http://p.rdcpix.com/v07/lc168ae43-m23s.jpg"
+                },
+                {
+                    "href": "http://p.rdcpix.com/v07/lc168ae43-m24s.jpg"
+                }
+            ],
+            "selling_agent_name": "Daniel Cloud",
+            "selling_office_url": "",
+            "selling_office_id": "802056",
+            "client_flags": {
+                "is_price_reduced": false,
+                "is_tcpa_message_enabled": false,
+                "is_newly_listed": false
+            },
+            "selling_agent_id": "20004205",
+            "lead_forms": [
+                {
+                    "show_contact_an_agent": true,
+                    "google_cashback_enabled": false,
+                    "form_type": "classic",
+                    "smarthome_enabled": false,
+                    "show_contact_a_lender": false,
+                    "lead_type": "co_broke",
+                    "cashback_enabled": false,
+                    "is_lcm_enabled": false,
+                    "show_text_leads": true,
+                    "show_veterans_united": false,
+                    "flip_the_market_enabled": false
+                }
+            ],
+            "selling_office_name": "Water Vista Realty, Llc",
+            "description": null,
+            "listing_id": 551973414,
+            "mls_id": "WPFL",
+            "listing_status": "OffMarket",
+            "selling_agent_url": ""
+        }
+    ],
+    "neighborhood": "Tequesta Pines",
+    "avm": {
+        "value": 0
+    },
+    "price_history": [
+        {
+            "date": "2014-09-15",
+            "price": 365000
+        },
+        {
+            "date": "2017-06-09",
+            "price": 363000
+        }
+    ],
+    "client_display_flags": {
+        "presentation_status": "not_for_sale"
+    },
+    "tax_history": {},
+    "sold_date": "2014-09-15"
+}

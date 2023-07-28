@@ -42,14 +42,10 @@ const provider = new GoogleAuthProvider();
 
 provider.setCustomParameters({ prompt: 'select_account' });
 
-
-
 const auth = getAuth();
 
 
 function SignIn() {
-
-  console.log(database);
 
   async function stuff(auth, provider) {
     try {
@@ -67,7 +63,7 @@ function SignIn() {
   }
   
   return (
-    <button id="signIn" onClick={() => stuff(auth, provider)} className="px-16 py-4  bg-bland text-3xl font-bold mt-20 bg-transparent hover:border-green-500 text-wavesfont-semibold hover:text-white rounded-xl">
+    <button id="signIn" onClick={() => stuff(auth, provider)} className="px-8 py-4  bg-bland text-3xl font-bold bg-transparent hover:border-green-500 text-wavesfont-semibold hover:text-white rounded-xl">
       Sign in 
     </button>
   );
@@ -120,21 +116,16 @@ function Home() {
   return (
     
     <div>
-      <div id="firebaseui-auth-container"></div>
-      <div id="loader">Loading...</div>
-      <section>
-        
-        {user ? <Dashboard auth={auth} user={user} db={database}/> : <SignIn/>}
-      </section>
-      <div className="overflow-auto max-w-xl">
+      <div className="mt-8 ">
         <Header/>
         <Background/>
-        <div className="mt-28">
-          <Title/>
-          <div className="mt-24 text-xl text-center">
-            {user ? <Search user={user} login={true}/> : <Search user={user} login={false}/>}
-            <button className="text-3xl" onClick={() => write()}>wreite</button>
-          </div>
+        <Title/>
+        <section>
+        
+          {user ? <Dashboard auth={auth} user={user} db={database}/> : <SignIn/>}
+        </section>
+        <div className="mt-4 text-xl text-center max-w-l">
+          {user ? <Search user={user} login={true}/> : <Search user={user} login={false}/>}
         </div>
 
       </div>

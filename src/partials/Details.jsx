@@ -1,6 +1,229 @@
+
 import jsons from './firebase.json';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faBath, faBed, faRuler, faCalendar, faDollarSign, faHome, faBuilding } from '@fortawesome/free-solid-svg-icons';
+
+import React, { useState} from 'react';
+import { useEffect } from 'react';
+import { initializeApp } from "firebase/app";
+import { getAnalytics } from "firebase/analytics";
+import { getAuth, signInWithPopup, GoogleAuthProvider } from "firebase/auth";
+import { getDatabase, increment, ref, set, child, get, onValue, push } from "firebase/database";
+
+// TODO: Add SDKs for Firebase products that you want to use
+// https://firebase.google.com/docs/web/setup#available-libraries
+
+// Your web app's Firebase configuration
+// For Firebase JS SDK v7.20.0 and later, measurementId is optional
+const firebaseConfig = {
+  databaseURL: "https://criblytics-default-rtdb.firebaseio.com/",
+  apiKey: "AIzaSyCRv3YXcKBp4caX4SLDf9tOM_jf6-PgKWc",
+  authDomain: "criblytics.firebaseapp.com",
+  projectId: "criblytics",
+  storageBucket: "criblytics.appspot.com",
+  messagingSenderId: "109707951445",
+  appId: "1:109707951445:web:120d9a55b9851e13bd03dc",
+  measurementId: "G-VH1N6MR0RG"
+};
+
+// Initialize Firebase
+const app = initializeApp(firebaseConfig);
+const analytics = getAnalytics(app);
+const database = getDatabase(app);
+
+const db = getDatabase();
+
+const animateCSS = (id, animation, prefix = 'animate__') =>
+  new Promise((resolve, reject) => {
+    const animationName = `${prefix}${animation}`;
+    const element = document.getElementById(id);
+
+    if (!element) {
+      reject(`Element with ID '${id}' not found.`);
+      return;
+    }
+
+    element.classList.add(`${prefix}animated`, animationName);
+
+    function handleAnimationEnd(event) {
+      event.stopPropagation();
+      element.classList.remove(`${prefix}animated`, animationName);
+      element.style.display = 'none';
+      resolve('Animation ended');
+      // At resolve, do backend stuff to check if property exists from API. Then pass it to the Table property.
+    }
+
+    element.addEventListener('animationend', handleAnimationEnd, { once: true });
+  });
+
+
+
+export default function Details(props) {
+
+  // Parent container
+  animateCSS('search', 'fadeOut'); 
+
+  console.log(props.listing_id);
+  return (
+    <div>
+      <Dropdown listing_id={props.listing_id}/>
+    </div>
+  );
+}
+
+const getRandomData = () => {
+  // Function to generate random data for demonstration purposes
+  return Math.random().toString(36).substring(2, 15);
+};
+
+const Dropdown = (props) => {
+  const [snap, setSnap] = useState({});
+  const [isKeyMetricsOpen, setIsKeyMetricsOpen] = useState(false);
+  const [isPropertyDetailsOpen, setIsPropertyDetailsOpen] = useState(false);
+
+  const handleKeyMetricsClick = () => {
+    setIsKeyMetricsOpen(!isKeyMetricsOpen);
+  };
+
+  const handlePropertyDetailsClick = () => {
+    setIsPropertyDetailsOpen(!isPropertyDetailsOpen);
+  };
+
+  useEffect(() => {
+    //listing id
+    const properties = ref(db, 'properties/' + props.listing_id);
+    get(properties).then((snapshot) => {
+      if (snapshot.exists()) {
+        //console.log(snapshot.val());
+        setSnap(snapshot.val());
+      } else {
+        console.log("No data available");
+      }
+    }).catch((error) => {
+      console.error(error);
+    });
+
+  }, []);
+
+  return (
+    
+    <div>
+      <h2 className="hover:text-emerald-400 text-3xl my-8 text-emerald-100 cursor-pointer" onClick={handleKeyMetricsClick} >
+        <span className={`triangle ${isKeyMetricsOpen ? 'open' : ''}`} /> 
+        Key Metrics
+      </h2>
+
+      {isKeyMetricsOpen && (
+        <div>
+          <p className="text-3xl border-4 border-emerald-800">Random Data: {getRandomData()}</p>
+          <ul>
+            <h1 className="text-grainy text-3xl font-medium">
+              {Object.entries(snap.price_history[0])}
+            </h1>
+            
+            <Calculator snap={snap} listing_id={props.listing_id}/>
+
+          </ul>
+        </div>
+      )}
+      
+      <h2 className="hover:text-slate-400 text-3xl my-8 text-slate-100 cursor-pointer" onClick={handlePropertyDetailsClick}>
+        <span className={`triangle ${isPropertyDetailsOpen ? 'open' : ''}`} />
+        Property Details
+      </h2>
+
+      {isPropertyDetailsOpen && (
+        <ul className="flex flex-wrap overflow-auto max-w-lg text-2xl font-medium">
+          {
+            Object.entries(snap.prop_common).map(([property, value]) => renderProperty(property, value))
+          }
+          <Photos snap={snap}/>
+        </ul>
+      ) }
+
+    </div>
+  );
+};
+
+const Photos = (props) => {
+  console.log(props.snap);
+  const [photos, setPhotos] = useState([]);
+  const [currentPhotoIndex, setCurrentPhotoIndex] = useState(0);
+  const [isPreloading, setIsPreloading] = useState(true);
+  const [object, setObject] = useState({});
+
+  useEffect(() => {
+    const property = ref(database, 'properties/' + props.listing_id);
+    get(property).then((snapshot) => {
+      let snap = props.snap;
+      if (snap && snap.photos && snap.photos.length > 0) {
+        setPhotos(snap.photos); // Set the photos array in the state
+        setIsPreloading(false); // Mark preloading as complete
+      }
+    });
+  }, []);
+
+  const handlePrevPhoto = () => {
+    setCurrentPhotoIndex((prevIndex) => (prevIndex - 1 + photos.length) % photos.length);
+  };
+
+  const handleNextPhoto = () => {
+    setCurrentPhotoIndex((prevIndex) => (prevIndex + 1) % photos.length);
+  };
+  return (
+    <>
+      <div className="border-2 border-grainy justify-center flex-wrap flex">
+        {isPreloading ? (
+          <div style={{ display: 'none' }}>
+            {photos.map((photo, index) => (
+              <img key={index} src={photo.href} alt={`Property ${index + 1}`} />
+            ))}
+          </div>
+        ) : (
+          <>
+            <img src={photos[currentPhotoIndex].href} className="p-8 w-full h-96 rounded-2xl shadow-lg" alt={`Property ${currentPhotoIndex + 1}`} />
+
+            <div className="flex justify-center my-4 rounded-xl">
+              <button className="mr-4 bg-grainy rounded-xl shadow-xl" onClick={handlePrevPhoto} disabled={photos.length === 1}>
+                Previous
+              </button>
+              <button className="bg-grainy rounded-xl shadow-xl" onClick={handleNextPhoto} disabled={photos.length === 1}>
+                Next
+              </button>
+            </div>
+          </>
+        )}
+      </div>
+    </>
+  )
+}
+
+const Calculator = async(props) => {
+  const listing_id = props.listing_id;
+  /*const url = 'https://us-real-estate.p.rapidapi.com/v2/for-rent?city=Westerly&state_code=RI&limit=42&offset=0&sort=recently_added&beds_min=1&beds_max=5&baths_min=1&baths_max=5&expand_search_radius=25&home_size_min=500&home_size_max=3000';
+  const options = {
+    method: 'GET',
+    headers: {
+      'X-RapidAPI-Key': '2661057b61msh8e6271d7a1763b6p12ffb0jsnc06db3ad292e',
+      'X-RapidAPI-Host': 'us-real-estate.p.rapidapi.com'
+    }
+  };
+
+  try {
+    const response = await fetch(url, options);
+    const result = await response.text();
+    console.log(result);
+  } catch (error) {
+    console.error(error);
+  }*/
+  console.log("Calculate: " + listing_id);
+
+  return(
+    <>
+      
+    </>
+  )
+}
 
 const iconMappings = {
   baths: faBath,
@@ -14,8 +237,13 @@ const iconMappings = {
   year_built: faCalendar,
 };
 
+
 const renderProperty = (property, value) => {
   const icon = iconMappings[property];
+
+  if(icon == null) 
+    return;
+  
 
   let formattedValue = value;
 
@@ -31,7 +259,7 @@ const renderProperty = (property, value) => {
       style: 'currency',
       currency: 'USD',
     }).format(value);
-    formattedValue = 'Sold price ' + formattedValue;
+    formattedValue = formattedValue.substring(1, formattedValue.length);
   }
 
   if(property === 'lot_sqft') 
@@ -62,91 +290,3 @@ const renderProperty = (property, value) => {
     </li>
   );
 };
-
-
-const l = jsons.properties.property;
-
-
-export default function Details() {
-    animateCSS('input, label, select, button', 'fadeOutRight'); 
-    return (
-        <div>
-            <h2 className="text-3xl my-8 text-emerald-100"> Key Metrics </h2>
-            <ul className='border-2 border-emerald-400 justify-center flex-wrap flex'>
-              {l[id].list_price}
-              {Object.entries(l[id].tags).map(([property, value]) =>
-                renderProperty(property, value)
-              )}
-            </ul>
-            <h2 className="text-3xl my-8 text-waves">Property Details</h2>
-            <ul className='border-2 border-grainy justify-center flex-wrap flex'>
-            {Object.entries(l[id].description).map(([property, value]) =>
-                renderProperty(property, value)
-            )}
-            <img src={l[id].primary_photo.href} className="p-8 w-full h-96 rounded-2xl shadow-lg"></img>
-            </ul>
-        </div>
-    );
-}
-
-const animateCSS = (element, animation, prefix = 'animate__') =>
-// We create a Promise and return it
-  new Promise((resolve, reject) => {
-  const animationName = `${prefix}${animation}`;
-  const elements = document.querySelectorAll(element);
-
-  elements.forEach(node => {
-    node.classList.add(`${prefix}animated`, animationName);
-
-    // When the animation ends, we clean the classes and resolve the Promise
-    function handleAnimationEnd(event) {
-      event.stopPropagation();
-      node.classList.remove(`${prefix}animated`, animationName);
-      node.style.display = 'none';
-      resolve('Animation ended');
-      //At resolve, do backend stuff to check if property exists from API. Then pass to Table property.
-    }
-
-    node.addEventListener('animationend', handleAnimationEnd, {once: true});
-  });
-
-});
-
-function jsonStuff() {
-    console.log(jsons.properties.property);
-    const search = findKeyWithValue(l, "1611 NE 5th Pl");
-    const index = search.substring(0, 1);
-    console.log(index);
-    
-    console.log(address);
-
-    let link = l[0].primary_photo.href;
-        // Create picture using tailwind that presents the property
-    const picture = document.getElementById("picture"); 
-    picture.src = link;
-    picture.classList.add("w-full", "h-96", "rounded-2xl", "shadow-lg");
-    
-    console.log(link);
-    console.log(picture);
-
-    // H1 that says "Property Details" in the middle of the page using tailwind 
-    const details = document.getElementById("details");
-    details.classList.add("mt-8", "text-3xl", "text-waves", "text-center", "rounded-lg");
-    details.innerHTML = "Property Details";
-
-    // Create react component that displays the property description
-    const description = document.getElementById("description");
-    description.classList.add("mt-8", "text-3xl", "text-grainy", "text-center", "rounded-lg", "shadow-lg", "border-2", "border-red-500", "border-opacity-50", "flex", "flex-wrap");
-    let arr = l[0].description;
-    for (var key of Object.keys(arr)) {
-      console.log(key + " -> " + arr[key]);
-
-      const icon = iconMapping[key] || faQuestion; // Replace `faQuestion` with the appropriate default icon from Font Awesome
-      const iconElement = `<i class="fa-solid fa-flag mr-2"></i>`;
-
-      description.innerHTML += `<div class="my-4 w-1/2">
-      <i class="fa-sharp fa-regular fa-money-bill"></i>
-      <span class="font-bold">${key}:</span> ${arr[key]}
-      </div>`;
-    }
-  }

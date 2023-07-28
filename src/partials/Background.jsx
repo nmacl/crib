@@ -17,10 +17,10 @@ function animateCircs() {
   const circs = document.querySelectorAll('.circle');
   circs.forEach((circ, index) => {
     // Calculate the new position for each circle based on the current time
-    const y = 15 * Math.sin(Date.now() / period + index);
+    const y = 10 * Math.sin(Date.now() / period + index);
 
     // Use the calculated y value to update the circle's position
-    circ.style.transform = `translateY(${y+330}px)`;
+    circ.style.transform = `translateY(${y+110}px)`;
   });
 
   // Schedule the next frame of the animation
@@ -41,7 +41,6 @@ const Circle = ({ color, position }) => (
       borderRadius: '50%',
       background: `radial-gradient(circle, ${circles[color]}, ${circles[color]})`,
       position: 'absolute',
-      transform: 'translate(-50%, 400%)',
       left: positionsLeft[position]+'%',
       boxShadow: '0 4px 8px 0 rgba(0, 0, 0, 0), 0 12px 20px 0 rgba(0, 0, 0, 0.5)'
     }}

@@ -39,4 +39,54 @@ button {
   transition: border-color 0.25s;
 }
 
+/* Update the CSS styles for the triangle */
+.triangle {
+  display: inline-block;
+  width: 0;
+  height: 0;
+  border-top: 10px solid transparent;
+  border-bottom: 10px solid transparent;
+  border-left: 20px solid white; /* Update this to be bigger */
+  margin-right: 10px;
+  transform-origin: center;
+  transition: transform 0.3s;
+}
 
+.open {
+  transform: rotate(90deg);
+}
+
+/* CSS for the glowing effect */
+@keyframes glowing {
+  0% {
+    box-shadow: 0 0 5px #6EE7B7;
+  }
+  50% {
+    box-shadow: 0 0 20px #6EE7B7;
+  }
+  100% {
+    box-shadow: 0 0 5px #6EE7B7;
+  }
+}
+
+/* CSS for the fading in and out animation */
+@keyframes fadeInOut {
+  0%, 100% {
+    opacity: 0;
+  }
+  25%, 75% {
+    opacity: 1;
+  }
+}
+
+/* CSS for the sliding in and out animation */
+@keyframes slideInOut {
+  0% {
+    opacity: 0;
+    transform: translateY(-100%);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}

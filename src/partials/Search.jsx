@@ -61,6 +61,7 @@ function Search(props) {
   const [state, setState] = useState('');
   const [address, setAddress] = useState('');
   const [isLogin, setLogin] = useState('false');
+  const [listing_id, setListing] = useState('0');
 
   //Property to ID resolver
 
@@ -86,32 +87,20 @@ function Search(props) {
 
   const [showDetails, setShowDetails] = useState(false);
 
-  const db = getDatabase();
-
-  const properties = ref(db, 'properties/');
-
-  const propertyReq = ref(db, 'properties/property');
-
-  const l = jsons.properties.property;
+  var isDone = false;
 
   const handleClick = () => {
-    if(true) {
+    if(isDone) {
       
       console.log("City: " + city);
       console.log("State: " + state);
       console.log("Address: " + address);
       console.log();
 
-      setShowDetails(true);
-
-      // Code to fetch properties from database
-
     } else {
       fetchProperties(city, state, address);
-      notLogin();
-      
+      //notLogin();
     }
-    //setShowDetails(true);
   };
 
   useEffect(() => {
@@ -126,25 +115,64 @@ function Search(props) {
     }
   };
 
-  const fetchProperties = (stateCode, city, location) => {
-    const URL = `https://us-real-estate.p.rapidapi.com/v2/for-sale?offset=0&limit=42&state_code=${stateCode}&city=${city}&sort=newest&limit=42`;
-    //const URL = 'https://us-real-estate.p.rapidapi.com/v3/for-sale?state_code=MI&city=Detroit&sort=newest&offset=0&limit=42';
-    fetch(URL, options)
-      .then(response => response.json())
-      .then(response => {
-        const property = response.data.home_search.results;
-        let fbaseProps = Object.values(property);
 
-        for(let i = 0; i < fbaseProps.length; i++) {
-          console.log(fbaseProps[i]);
-          push(properties, fbaseProps[i]);
+  const fetchProperties = (stateCode, city, location) => {
+
+    if (stateCode === '' || city === '' || location === '') {
+      alert("Invalid input");
+    } else {
+      const formattedAddress = `${location} ${stateCode} ${city}`;
+      const perfect = encodeURIComponent(formattedAddress);
+
+      const propID = `https://us-real-estate.p.rapidapi.com/location/suggest?input=${perfect}`;
+
+      const properties = ref(database, 'properties');
+
+      get(properties).then((snapshot) => {
+        const propertyData = snapshot.val();
+        const existingProperty = Object.values(propertyData).find(
+          (property) => property.city === city && property.state === stateCode && property.address === location
+        );
+
+        if (existingProperty) {
+          console.log("Property data already exists");
+          setListing(existingProperty.property_id);
+          setShowDetails(true);
+        } else {
+          console.log("Property data not found, fetching from API");
+
+          fetch(propID, options)
+            .then(response => response.json())
+            .then(response => {
+              const property = response.data[0].property_id;
+              setListing(property);
+
+              const propDetails = `https://us-real-estate.p.rapidapi.com/v2/property-detail?property_id=${property}`;
+
+              fetch(propDetails, options)
+                .then(details => details.json())
+                .then(details => {
+                  let json = details.data.property_detail;
+                  delete json.product_attributes;
+                  set(properties.child(property), json); // Save the data in Firebase under the property ID
+                  setShowDetails(true);
+                })
+                .catch(err => console.error(err));
+            })
+            .catch(err => console.error(err));
         }
-      })
-      .catch(err => console.error(err));
-  }
+      }).catch((error) => {
+        console.error(error);
+      });
+    }
+  };
+
+  // ... (existing code)
+
 
   return (
-    <div>
+    <>
+    <div id="search">
         <div className="p-4 flex content-center justify-center text-center">
             <div className="w-1/2 mr-2">
                 <label className="text-3xl block text-grainy mb-2">City</label>
@@ -182,11 +210,10 @@ function Search(props) {
         <img id="picture" src=""></img>
         <div id="details"></div>
         <div id="description"></div>
-        {showDetails && <Details/>}
-
         
-      </div>
-    
+    </div>
+    {showDetails && <Details listing_id={listing_id}/>}
+    </>
   );
 };
 
