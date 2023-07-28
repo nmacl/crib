@@ -118,57 +118,82 @@ function Search(props) {
 
   const fetchProperties = (stateCode, city, location) => {
 
-    if (stateCode === '' || city === '' || location === '') {
+    const button = document.getElementById('search');
+
+    if(stateCode === '' || city === '' || location === '') {
       alert("Invalid input");
     } else {
+      /*console.log(stateCode);
+      console.log(city);
+      console.log(location);*/
+
       const formattedAddress = `${location} ${stateCode} ${city}`;
       const perfect = encodeURIComponent(formattedAddress);
+      console.log(perfect);
 
       const propID = `https://us-real-estate.p.rapidapi.com/location/suggest?input=${perfect}`;
 
-      const properties = ref(database, 'properties');
+      fetch(propID, options)
+      .then(response => response.json())
+      .then(response => {
+        // for each select first property id and resolve to property
+        const property = response.data[0].property_id;
 
-      get(properties).then((snapshot) => {
-        const propertyData = snapshot.val();
-        const existingProperty = Object.values(propertyData).find(
-          (property) => property.city === city && property.state === stateCode && property.address === location
-        );
+        /*let fbaseProps = Object.values(property);
 
-        if (existingProperty) {
-          console.log("Property data already exists");
-          setListing(existingProperty.property_id);
-          setShowDetails(true);
-        } else {
-          console.log("Property data not found, fetching from API");
+        for(let i = 0; i < fbaseProps.length; i++) {
+          let properties = ref(database, 'properties/' + fbaseProps[i].permalink);
+          if(get(properties) != null) {
+            console.log('already!');
+            continue;
+          }
+          console.log(fbaseProps[i]);
+          set(properties, fbaseProps[i]);
+        }*/
 
-          fetch(propID, options)
-            .then(response => response.json())
-            .then(response => {
-              const property = response.data[0].property_id;
-              setListing(property);
+        console.log(property);
 
-              const propDetails = `https://us-real-estate.p.rapidapi.com/v2/property-detail?property_id=${property}`;
+        setListing(property);
 
-              fetch(propDetails, options)
-                .then(details => details.json())
-                .then(details => {
-                  let json = details.data.property_detail;
-                  delete json.product_attributes;
-                  set(properties.child(property), json); // Save the data in Firebase under the property ID
-                  setShowDetails(true);
-                })
-                .catch(err => console.error(err));
-            })
-            .catch(err => console.error(err));
-        }
-      }).catch((error) => {
-        console.error(error);
-      });
+        const properties = ref(database, 'properties/' + property);
+
+        get(properties).then((snapshot) => {
+          if (snapshot.exists()) {
+            console.log("Already exists");
+            setShowDetails(true);
+
+            return;
+          } else {
+            console.log("No data available");
+            const propDetails = `https://us-real-estate.p.rapidapi.com/v2/property-detail?property_id=${property}`;
+
+            fetch(propDetails, options).then(details => details.json())
+            .then(details => {
+              console.log(details);
+    
+              // Set firebase property data
+    
+              let json = details.data.property_detail;
+              // Remove child element product_attributes
+              delete json.product_attributes;
+              set(properties, json);
+              setShowDetails(true);
+            }).catch(err => console.error(err));
+          }
+        }).catch((error) => {
+          console.error(error);
+        })
+      })
+      .catch(err => console.error(err));
     }
-  };
 
-  // ... (existing code)
 
+    // Fetch location from suggest
+    // Resolve to address
+    // Store firebase address, city, state
+    /*const URL = `https://us-real-estate.p.rapidapi.com/v2/for-sale?offset=0&limit=42&state_code=${stateCode}&city=${city}&limit=42`;
+    //const URL = 'https://us-real-estate.p.rapidapi.com/v3/for-sale?state_code=MI&city=Detroit&sort=newest&offset=0&limit=42';*/
+  }
 
   return (
     <>
