@@ -1,0 +1,199 @@
+
+import jsons from './firebase.json';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faBath, faBed, faRuler, faCalendar, faDollarSign, faHome, faBuilding } from '@fortawesome/free-solid-svg-icons';
+
+import React, { useState } from 'react';
+import { useEffect } from 'react';
+import { initializeApp } from "firebase/app";
+import { getAnalytics } from "firebase/analytics";
+import { getAuth, signInWithPopup, GoogleAuthProvider } from "firebase/auth";
+import { getDatabase, increment, ref, set, child, get, onValue, push } from "firebase/database";
+
+// TODO: Add SDKs for Firebase products that you want to use
+// https://firebase.google.com/docs/web/setup#available-libraries
+
+// Your web app's Firebase configuration
+// For Firebase JS SDK v7.20.0 and later, measurementId is optional
+const firebaseConfig = {
+  databaseURL: "https://criblytics-default-rtdb.firebaseio.com/",
+  apiKey: "AIzaSyCRv3YXcKBp4caX4SLDf9tOM_jf6-PgKWc",
+  authDomain: "criblytics.firebaseapp.com",
+  projectId: "criblytics",
+  storageBucket: "criblytics.appspot.com",
+  messagingSenderId: "109707951445",
+  appId: "1:109707951445:web:120d9a55b9851e13bd03dc",
+  measurementId: "G-VH1N6MR0RG"
+};
+
+// Initialize Firebase
+const app = initializeApp(firebaseConfig);
+const analytics = getAnalytics(app);
+const database = getDatabase(app);
+
+const db = getDatabase();
+
+const properties = ref(db, 'properties/');
+
+const iconMappings = {
+  baths: faBath,
+  beds: faBed,
+  lot_sqft: faRuler,
+  sold_date: faCalendar,
+  sold_price: faDollarSign,
+  sqft: faRuler,
+  stories: faBuilding,
+  type: faHome,
+  year_built: faCalendar,
+};
+
+
+const renderProperty = (property, value) => {
+  const icon = iconMappings[property];
+
+  if(icon == null) 
+    return;
+  
+
+  let formattedValue = value;
+
+  // Format dates
+  if (property === 'sold_date' || property === 'year_built') {
+    const date = new Date(value);
+    formattedValue = date.getFullYear().toString();
+  }
+
+  // Format prices
+  if (property === 'sold_price') {
+    formattedValue = new Intl.NumberFormat('en-US', {
+      style: 'currency',
+      currency: 'USD',
+    }).format(value);
+    formattedValue = 'Sold price ' + formattedValue;
+  }
+
+  if(property === 'lot_sqft') 
+    formattedValue = 'Lot size ' + formattedValue + ' sqft';
+
+  if(property === 'sqft')
+    formattedValue = formattedValue + ' sqft';
+
+  if(property === 'sold_date')
+    formattedValue = 'Last sold ' + formattedValue;
+
+  if(property === 'year_built')
+    formattedValue = 'Built in ' + formattedValue;
+
+  if (property === 'type') {
+    formattedValue = formattedValue.replace('_', ' ');
+    formattedValue = formattedValue.charAt(0).toUpperCase() + formattedValue.slice(1);
+  }
+
+  if(property === 'stories')
+    formattedValue = 'Stories ' + formattedValue;
+  
+
+
+  return (
+    <li key={property} className="text-waves my-4 w-1/2">
+       <FontAwesomeIcon icon={icon} /> {formattedValue}
+    </li>
+  );
+};
+
+const [photos, setPhotos] = useState([]);
+const [currentPhotoIndex, setCurrentPhotoIndex] = useState(0);
+const [isPreloading, setIsPreloading] = useState(true);
+const [object, setObject] = useState({});
+
+useEffect(() => {
+  const property = ref(database, 'properties/' + props.listing_id);
+  get(property).then((snapshot) => {
+    let snap = snapshot.val();
+    if (snap && snap.photos && snap.photos.length > 0) {
+      setPhotos(snap.photos); // Set the photos array in the state
+      setIsPreloading(false); // Mark preloading as complete
+    }
+    console.log(snap);
+    setObject(snap);
+    console.log(snap.prop_common);
+  });
+}, [props.listing_id]);
+
+const handlePrevPhoto = () => {
+  setCurrentPhotoIndex((prevIndex) => (prevIndex - 1 + photos.length) % photos.length);
+};
+
+const handleNextPhoto = () => {
+  setCurrentPhotoIndex((prevIndex) => (prevIndex + 1) % photos.length);
+};
+
+//Object.entries(object.listings[0]).map(([property, value]) => renderProperty(property, value))
+
+<div className="border-2 border-grainy justify-center flex-wrap flex">
+{isPreloading ? (
+  <div style={{ display: 'none' }}>
+    {photos.map((photo, index) => (
+      <img key={index} src={photo.href} alt={`Property ${index + 1}`} />
+    ))}
+  </div>
+) : (
+  <>
+    <img src={photos[currentPhotoIndex].href} className="p-8 w-full h-96 rounded-2xl shadow-lg" alt={`Property ${currentPhotoIndex + 1}`} />
+
+    <div className="flex justify-center my-4 rounded-xl">
+      <button className="mr-4 bg-grainy rounded-xl shadow-xl" onClick={handlePrevPhoto} disabled={photos.length === 1}>
+        Previous
+      </button>
+      <button className="bg-grainy rounded-xl shadow-xl" onClick={handleNextPhoto} disabled={photos.length === 1}>
+        Next
+      </button>
+    </div>
+  </>
+)}
+</div>
+
+
+
+export default function Details(props) {
+  const property = ref(database, 'properties/' + props.listing_id);
+    animateCSS('input, label, select, button', 'fadeOutRight'); 
+    return (
+        <div>
+            <h2 className="text-3xl my-8 text-emerald-100"> Key Metrics </h2>
+            
+            <ul className='border-2 border-emerald-400 justify-center flex-wrap flex'>
+            </ul>
+
+            <h2 className="text-3xl my-8 text-waves">Property Details</h2>
+
+            <ul className='border-2 border-grainy justify-center flex-wrap flex'>
+              <img className="p-8 w-full h-96 rounded-2xl shadow-lg"></img>
+            
+            </ul>
+        </div>
+    );
+}
+
+const animateCSS = (element, animation, prefix = 'animate__') =>
+// We create a Promise and return it
+  new Promise((resolve, reject) => {
+  const animationName = `${prefix}${animation}`;
+  const elements = document.querySelectorAll(element);
+
+  elements.forEach(node => {
+    node.classList.add(`${prefix}animated`, animationName);
+
+    // When the animation ends, we clean the classes and resolve the Promise
+    function handleAnimationEnd(event) {
+      event.stopPropagation();
+      node.classList.remove(`${prefix}animated`, animationName);
+      node.style.display = 'none';
+      resolve('Animation ended');
+      //At resolve, do backend stuff to check if property exists from API. Then pass to Table property.
+    }
+
+    node.addEventListener('animationend', handleAnimationEnd, {once: true});
+  });
+
+});
