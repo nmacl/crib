@@ -74,6 +74,7 @@ function SignIn() {
 function Home() {
 
   const [user, setUser] = useState(null);
+  const [login, setLogin] = useState(false);
 
   useEffect(() => {
     auth.onAuthStateChanged(user => {
@@ -81,43 +82,13 @@ function Home() {
     })
   }, [])
 
+  const [indicatorPosition, setIndicatorPosition] = useState(100); // Example initial position
 
-  function writeUserData(name, email, imageUrl) {
-    const db = getDatabase();
-    set(ref(db, 'users/' + user.uid + "/"), {
-      username: name,
-      email: email,
-      profile_picture : imageUrl,
-      0: "address"
-    });
-  }
-  
-  function writeProperty(id, address, bd, ba, year) {
-    const db = getDatabase();
-    set(ref(db, 'properties/' + user.uid + "/" + id), {
-      address: address,
-      bd: bd,
-      ba: ba,
-      year: year
-    });
-  }
-
-  function write() {
-    const address = "123 Birch St, Jupiter, FL, 33469";
-    const bd = 3;
-    const ba = 2;
-    const year  = 2003;
-    const id = 0;
-    console.log(user);
-    //writeUserData(user.displayName, user.email, user.photoURL);
-    writeProperty(id, address, bd, ba, year);
-  }
-//property section within dashboard
+  //property section within dashboard
   return (
     
     <div>
       <div className="mt-8 ">
-        <Header/>
         <Background/>
         <Title/>
         <section>
@@ -125,12 +96,19 @@ function Home() {
           {user ? <Dashboard auth={auth} user={user} db={database}/> : <SignIn/>}
         </section>
         <div className="mt-4 text-xl text-center max-w-l">
-          {user ? <Search user={user} login={true}/> : <Search user={user} login={false}/>}
+          {user ? <Search user={user} login={true}/> : null}
         </div>
-
       </div>
+      <ColorGradientIndicator indicatorPosition={indicatorPosition} />
     </div>
   )
+}
+
+function ColorGradientIndicator({ indicatorPosition }) {
+  return (
+    <div className="mx-auto w-72 h-8 bg-gradient-to-r from-red-500 to-green-500 mb-6 rounded-lg shadow-2xl">
+    </div>
+  );
 }
 
 export default Home

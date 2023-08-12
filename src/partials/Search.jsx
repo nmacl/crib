@@ -9,8 +9,6 @@ import { useResolvedPath } from 'react-router-dom';
 import { library, icon } from '@fortawesome/fontawesome-svg-core'
 import { faMoneyBill } from '@fortawesome/free-solid-svg-icons'
 import Details from './Details'
-import jsons from './firebase.json';
-
 
 
 
@@ -45,7 +43,7 @@ const auth = getAuth();
 
 const states = [
   "AL", "AK", "AZ", "AR", "CA",
-  "CO", "CT", "DE", "FL", "GA",
+  "CO", "CT", "DE", "DC", "FL", "GA",
   "HI", "ID", "IL", "IN", "IA",
   "KS", "KY", "LA", "ME", "MD",
   "MA", "MI", "MN", "MS", "MO",
@@ -87,19 +85,32 @@ function Search(props) {
 
   const [showDetails, setShowDetails] = useState(false);
 
-  var isDone = false;
 
   const handleClick = () => {
-    if(isDone) {
+    let login = props.login;
+    if(login) {
       
       console.log("City: " + city);
       console.log("State: " + state);
       console.log("Address: " + address);
       console.log();
 
-    } else {
+      //setShowDetails(true);
+
+      let user = props.user;
+      let uid = user.uid;
+      let email = user.email;
+      let name = user.displayName;
+
+      console.log(user);
+      console.log(uid);
+      console.log(email);
+      console.log(name);
+
       fetchProperties(city, state, address);
-      //notLogin();
+
+    } else {
+      alert("Please login before continuing");
     }
   };
 
@@ -161,7 +172,6 @@ function Search(props) {
           if (snapshot.exists()) {
             console.log("Already exists");
             setShowDetails(true);
-
             return;
           } else {
             console.log("No data available");
@@ -183,6 +193,30 @@ function Search(props) {
         }).catch((error) => {
           console.error(error);
         })
+        
+        const userRef = ref(database, 'users/' + props.user.uid + '/history/');
+
+        get(userRef).then((snapshot) => {
+          let historyArray = snapshot.val() || []; // If the history array is null or undefined, initialize it as an empty array
+
+          // Check if the listing_id is not already present in the historyArray
+          if (!historyArray.includes(property)) {
+            historyArray.push(property); // Append the new listing_id to the history array
+            set(userRef, historyArray) // Update the user's history with the modified array
+              .then(() => {
+                console.log('Successfully updated user history.');
+              })
+              .catch((error) => {
+                console.error('Error updating user history:', error);
+              });
+          } else {
+            console.log('listing_id already exists in user history.');
+          }
+        }).catch((error) => {
+          console.error('Error fetching user history:', error);
+        });
+        
+      
       })
       .catch(err => console.error(err));
     }

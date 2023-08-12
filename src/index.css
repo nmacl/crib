@@ -2,6 +2,42 @@
 @tailwind components;
 @tailwind utilities;
 
+/* styles.css */
+
+.indicator {
+  position: absolute;
+  border-left: 5px solid transparent;
+  border-right: 5px solid transparent;
+  border-bottom: 10px solid #ff00ff;
+  animation: glow 1s infinite alternate; /* Add a glow animation */
+  filter: drop-shadow(0 0 10px #ff00ff); /* Add a fluorescent drop shadow */
+}
+
+@keyframes glow {
+  from {
+    filter: drop-shadow(0 0 10px #ff00ff);
+    opacity: 1;
+  }
+  to {
+    filter: drop-shadow(0 0 20px #ff00ff);
+    opacity: 0.8;
+  }
+}
+
+
+#priceInput {
+  /* Remove border and background */
+  border: none;
+  background: none;
+
+  /* Remove interactivity styles */
+  cursor: default;
+  user-select: none;
+
+  outline: none;
+}
+
+
 :root {
   font-family: Avenir, 'Montserrat', Helvetica, Arial, sans-serif;
   line-height: 40px;
