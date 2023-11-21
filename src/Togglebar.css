@@ -1,0 +1,45 @@
+/* ToggleBar.css */
+.toggle-bar {
+    display: flex;
+    align-items: center;
+    gap: 20px; /* Increased gap to accommodate larger toggle */
+}
+
+.label {
+    font-weight: bold;
+    color: #333;
+    user-select: none;
+}
+
+.label-inactive {
+    color: #aaa;
+}
+
+.toggle-switch {
+    width: 120px; /* Increased width for a larger switch */
+    height: 50px;  /* Increased height for a larger switch */
+    border-radius: 25px; /* Adjusted border-radius for aesthetic */
+    background-color: #e53e3e; /* Deeper red color */
+    position: relative;
+    cursor: pointer;
+    transition: background-color 0.4s; /* Transition for background color */
+}
+
+.toggle-switch.on {
+    background-color: #3182ce; /* Deeper blue color */
+}
+
+.toggle-knob {
+    width: 46px; /* Increased knob size */
+    height: 46px; /* Increased knob size */
+    border-radius: 50%;
+    background-color: white;
+    position: absolute;
+    top: 2px; /* Adjusted for the larger switch */
+    left: 2px; /* Adjusted for the larger switch */
+    transition: transform 0.4s; /* Slower transition for the knob */
+}
+
+.toggle-switch.on .toggle-knob {
+    transform: translateX(68px); /* Adjusted for the larger switch */
+}

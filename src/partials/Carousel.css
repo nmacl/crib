@@ -1,0 +1,12 @@
+/* CustomCarousel.css */
+.carousel-container {
+    position: relative;
+    margin: auto;
+    overflow: hidden;
+    border: 1px solid #ddd; /* Optional: for visual reference */
+    font-size: 20px;
+}
+
+.carousel-card {
+  padding: 20px;
+}

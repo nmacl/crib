@@ -1,13 +1,12 @@
-import Header from './partials/Header';
 import Background from './partials/Background';
 import Search from './partials/Search';
 import Title from './partials/Title';
-import Table from './partials/Table';
-import Card from './partials/Card';
-import Menu from './partials/Menu';
 import Dashboard from './partials/Dashboard'
+import Lookup from './partials/Lookup';
 import './App.css'
 import 'animate.css';
+import './ToggleBar.css'; // Assuming you have a separate CSS file for styles
+
 // Import the functions you need from the SDKs you need
 import { initializeApp } from "firebase/app";
 import { getAnalytics } from "firebase/analytics";
@@ -63,50 +62,72 @@ function SignIn() {
   }
   
   return (
-    <button id="signIn" onClick={() => stuff(auth, provider)} className="px-8 py-4  bg-bland text-3xl font-bold bg-transparent hover:border-green-500 text-wavesfont-semibold hover:text-white rounded-xl">
-      Sign in 
-    </button>
+    <div>
+      <button className="login-with-google-btn w-64 h-16 font-medium text-md duration-200 transition-shadow shadow-xl hover:outline outline-2 outline-emerald-600" onClick={() => stuff(auth, provider)} >
+        Sign in with Google
+      </button>
+    </div>
+    
   );
   
 }
 
-
 function Home() {
-
   const [user, setUser] = useState(null);
-  const [login, setLogin] = useState(false);
-
+  const [toggleVal, setToggleVal] = useState(false); // Moved toggle state here
+  
   useEffect(() => {
     auth.onAuthStateChanged(user => {
       setUser(user);
     })
   }, [])
 
-  const [indicatorPosition, setIndicatorPosition] = useState(100); // Example initial position
+  const toggle = () => {
+    setToggleVal(!toggleVal);
+  };
 
-  //property section within dashboard
   return (
-    
     <div>
       <div className="mt-8 ">
         <Background/>
         <Title/>
         <section>
-        
           {user ? <Dashboard auth={auth} user={user} db={database}/> : <SignIn/>}
         </section>
         <div className="mt-4 text-xl text-center max-w-l">
-          {user ? <Search user={user} login={true}/> : null}
+          <Toggle toggle={toggle} toggleVal={toggleVal} />
         </div>
+
+        {user && (toggleVal ? <Lookup/> : <Search user={user} login={true}/>)}
+
+        {user ? null : <About/>}
       </div>
-      <ColorGradientIndicator indicatorPosition={indicatorPosition} />
     </div>
   )
 }
 
-function ColorGradientIndicator({ indicatorPosition }) {
+function Toggle({ toggle, toggleVal }) {
   return (
-    <div className="mx-auto w-72 h-8 bg-gradient-to-r from-red-500 to-green-500 mb-6 rounded-lg shadow-2xl">
+    <div className="p-12 toggle-bar justify-center mx-auto" onClick={toggle}>
+      <label className={`font-bold ${!toggleVal ? 'opacity-100' : 'opacity-50'}`}>Area Search</label>
+      <div className={`toggle-switch ${toggleVal ? 'on' : 'off'}`}>
+        <div className="toggle-knob"></div>
+      </div>
+      <label className={`font-bold ${toggleVal ? 'opacity-100' : 'opacity-50'}`}>House Lookup</label>
+    </div>
+  );
+}
+
+
+function About() {
+  return (
+    <div className="mt-8 mx-auto max-w-md text-left border-grainy border-2 p-8">
+      <ul className="list-none list-inside space-y-4">
+        <li className="text-xl leading-snug">Search properties by state, city, price, and filters.</li>
+        <li className="text-xl leading-snug">Analyze rental investment prospects with ease.</li>
+        <li className="text-xl leading-snug">Discover key metrics visually.</li>
+        <li className="text-xl leading-snug">Use mortgage calculator and rental estimates.</li>
+      </ul>
     </div>
   );
 }

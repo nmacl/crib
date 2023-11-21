@@ -8,7 +8,8 @@ import { initializeApp } from "firebase/app";
 import { getAnalytics } from "firebase/analytics";
 import { getAuth, signInWithPopup, GoogleAuthProvider } from "firebase/auth";
 import { getDatabase, increment, ref, set, child, get, onValue, push } from "firebase/database";
-import CurrencyInput from "react-currency-input-field";
+import "./Details.css";
+import CurrencyInput from 'react-currency-input-field';
 
 
 // TODO: Add SDKs for Firebase products that you want to use
@@ -34,35 +35,9 @@ const database = getDatabase(app);
 
 const db = getDatabase();
 
-const animateCSS = (id, animation, prefix = 'animate__') =>
-  new Promise((resolve, reject) => {
-    const animationName = `${prefix}${animation}`;
-    const element = document.getElementById(id);
-
-    if (!element) {
-      reject(`Element with ID '${id}' not found.`);
-      return;
-    }
-
-    element.classList.add(`${prefix}animated`, animationName);
-
-    function handleAnimationEnd(event) {
-      event.stopPropagation();
-      element.classList.remove(`${prefix}animated`, animationName);
-      element.style.display = 'none';
-      resolve('Animation ended');
-      // At resolve, do backend stuff to check if property exists from API. Then pass it to the Table property.
-    }
-
-    element.addEventListener('animationend', handleAnimationEnd, { once: true });
-  });
-
-
 
 export default function Details(props) {
 
-  // Parent container
-  animateCSS('search', 'fadeOut'); 
 
   console.log(props.listing_id);
   return (
@@ -114,7 +89,7 @@ const Dropdown = (props) => {
 
   return (
     
-    <div>
+    <div className="details">
       <h2 className="hover:text-emerald-400 text-3xl my-8 text-emerald-100 cursor-pointer" onClick={handleKeyMetricsClick} >
         <span className={`triangle ${isKeyMetricsOpen ? 'open' : ''}`} /> 
         Key Metrics
@@ -224,7 +199,6 @@ const Calculator = (props) => {
   let length = 0;
 
   useEffect(() => {
-    console.log(snap.prop_common.price + 'price');
     const fetchData = async () => {
       get(rentalProperty).then((snapshot) => {  
         let m = null;
@@ -322,7 +296,7 @@ const Calculator = (props) => {
 
 
   const [rent, setRent] = useState(0);
-  const [price, setPrice] = useState(snap.prop_common.price);
+  const [price, setPrice] = useState(0);
 
   const [initialDownpayment, setInitialDownpayment] = useState(20); // Default to 20% of the total price
   const [interestRate, setInterestRate] = useState('6.0'); // Default to 6.0% interest rate as a string
@@ -412,19 +386,19 @@ const Calculator = (props) => {
                 <div className="flex items-center mb-4">
                     <span className="w-1/2">Rent Estimate: </span>
                     <div className="w-1/2 overflow-auto font-medium">
-                        <CurrencyInput 
-                          prefix={'$'}
-                          name="priceInput"
-                          id="priceInput"
-                          data-number-to-fixed="2"
-                          data-number-stepfactor="100"
-                          value={rent}
-                          placeholder=""
-                          onChange={handleRentChange}
-                          allowDecimals
-                          decimalsLimit="2"
-                          disableAbbreviations
-                        />
+                    <CurrencyInput 
+                        prefix={'$'}
+                        name="priceInput"
+                        id="priceInput"
+                        data-number-to-fixed="2"
+                        data-number-stepfactor="100"
+                        value={rent}
+                        placeholder=""
+                        onChange={handleRentChange}
+                        allowDecimals
+                        decimalsLimit="2"
+                        disableAbbreviations
+                      />
                     </div>
                   </div>
               </div>

@@ -16,12 +16,14 @@ export default function Title() {
     return (
 
         <div className="">
-            <Link to="/About">
-                <h1 className="mx-20 sm:text-5xl text-4xl font-extrabold leading-tighter tracking-tighter mb-24">Crib<span className="bg-clip-text text-transparent bg-gradient-to-r from-grainy to-bland">lytics.</span></h1>
-                <p className="text-2xl text-waves mb-8">
-                    Find your dream <span className={COLORS[currentIndex]}>{TEXTS[currentIndex]}</span>
-                </p>
-            </Link>
+            <h1 className="mx-20 sm:text-5xl text-4xl font-extrabold leading-tighter tracking-tighter mb-24">
+                <a href="#" onClick={() => window.location.reload()}>
+                Crib<span className="bg-clip-text text-transparent bg-gradient-to-r from-grainy to-bland">lytics.</span>
+                </a>
+            </h1>
+            <p className="text-2xl text-waves mb-8">
+                Find your dream <span className={COLORS[currentIndex]}>{TEXTS[currentIndex]}</span>
+            </p>
         </div>
     );
 }

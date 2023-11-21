@@ -1,15 +1,19 @@
 import React, { useState } from 'react';
-import { useEffect } from 'react';
 import { initializeApp } from "firebase/app";
 import { getAnalytics } from "firebase/analytics";
 import { getAuth, signInWithPopup, GoogleAuthProvider } from "firebase/auth";
 import { getDatabase, increment, ref, set, child, get, onValue, push } from "firebase/database";
-import { data } from 'autoprefixer';
-import { useResolvedPath } from 'react-router-dom';
-import { library, icon } from '@fortawesome/fontawesome-svg-core'
-import { faMoneyBill } from '@fortawesome/free-solid-svg-icons'
-import Details from './Details'
+import CurrencyInput from './input/CurrencyInput'; 
+import PropertyCarousel from './PropertyCarousel';
+// Importing parsing utilities
+import { parseProperty } from './services/propertyParse';
+import { parseRent } from './services/rentParse'; 
+import { parseSold } from './services/soldParse';
 
+import { searchProperties } from './services/propertySearch';
+import { searchRent } from './services/rentSearch'; 
+import { searchSold } from './services/soldSearch'; 
+import './Spinner.css';
 
 
 // TODO: Add SDKs for Firebase products that you want to use
@@ -33,13 +37,9 @@ const app = initializeApp(firebaseConfig);
 const analytics = getAnalytics(app);
 const database = getDatabase(app);
 
-
-
 const provider = new GoogleAuthProvider();
 
 provider.setCustomParameters({ prompt: 'select_account' });
-
-const auth = getAuth();
 
 const states = [
   "AL", "AK", "AZ", "AR", "CA",
@@ -52,226 +52,204 @@ const states = [
   "OK", "OR", "PA", "RI", "SC",
   "SD", "TN", "TX", "UT", "VT",
   "VA", "WA", "WV", "WI", "WY"
-  ];
+];
+
+
 
 function Search(props) {
-  const [city, setCity] = useState('');
-  const [state, setState] = useState('');
-  const [address, setAddress] = useState('');
-  const [isLogin, setLogin] = useState('false');
-  const [listing_id, setListing] = useState('0');
+  const [city, setCity] = useState('Jupiter');
+  const [state, setState] = useState('FL');
+  const [beds, setBeds] = useState(3);
+  const [baths, setBaths] = useState(2);
+  const [propertyData, setPropertyData] = useState([]); 
+  const [priceMin, setPriceMin] = useState(0);
+  const [priceMax, setPriceMax] = useState(1000000);
 
-  //Property to ID resolver
+  const [rent, setRent] = useState(0);
+  const [sold, setSold] = useState(0);
 
-  //Search to property list
-    //Search by street for sale
-      //Output all results to properties database
-        //Select specific from street number
+  const [loading, setLoading] = useState(false);
 
-  
-  //Properties:
-    //Address
+  const useEffect = (() => {
+    console.log("property data");
+  }, [propertyData]);
 
-  function notLogin() {
-    const signInButton = document.getElementById("signIn");
-    signInButton.classList.remove("border-transparent");
-    signInButton.classList.add("border-red-500");
-    window.scroll({
-      top: 0,
-      left: 0,
-      behavior: "smooth"
-    });
+  if(loading) {
+    return(      <div className="fixed top-0 left-0 w-full h-full bg-gray-500 bg-opacity-50 flex justify-center items-center z-50">
+    <div className="spinner"></div>
+  </div>);
   }
 
-  const [showDetails, setShowDetails] = useState(false);
 
+  async function performSearch() {
+    setLoading(true);
+    try {
+      let averageRent = 0;
+      let averageSold = 0;
+
+      const rentResponse = await searchRent(city, state, beds, baths);
+      if (rentResponse.data && rentResponse.data.home_search.results.length > 0) {
+        averageRent = calculateAverage(rentResponse.data.home_search.results, parseRent);
+        console.log(`Average rent: ${averageRent}`);
+        setRent(averageRent);
+      } else {
+        console.error('No rental data available');
+      }
+
+      const soldResponse = await searchSold(city, state, beds, baths, priceMin, priceMax);
+      if (soldResponse.data && soldResponse.data.results.length > 0) {
+        averageSold = calculateAverage(soldResponse.data.results, parseSold);
+        console.log(`Average sold: ${averageSold}`);
+        setSold(averageSold);
+      } else {
+        console.error('No sold data available');
+      }
+  
+      const propertiesResponse = await searchProperties(city, state, beds, baths, priceMin, priceMax);
+      if (propertiesResponse.data && propertiesResponse.data.home_search.results.length > 0) {
+        propertiesResponse.data.home_search.results.forEach(house => {
+          house.rent = averageRent;
+          house.sold = averageSold;
+  
+          const property = parseProperty(house);
+          if (property) {
+            setPropertyData(prev => [...prev, property]);
+          }
+          setLoading(false);
+        });
+      } else {
+        alert('No property data available');
+      }
+    } catch (error) {
+      console.error('Error fetching data: ', error);
+    }
+  }
+  
+  function calculateAverage(results, parseFunction) {
+    let total = 0;
+    let validEntries = 0;
+  
+    results.forEach(house => {
+      const details = parseFunction(house);
+      if (details && 'list_price' in details && typeof details.list_price === 'number') {
+        total += details.list_price;
+        validEntries += 1;
+      }
+    });
+  
+    return validEntries > 0 ? (total / validEntries) : 0;
+  }
+  
 
   const handleClick = () => {
+    setPropertyData([]);
     let login = props.login;
     if(login) {
-      
-      console.log("City: " + city);
-      console.log("State: " + state);
-      console.log("Address: " + address);
-      console.log();
-
-      //setShowDetails(true);
-
-      let user = props.user;
-      let uid = user.uid;
-      let email = user.email;
-      let name = user.displayName;
-
-      console.log(user);
-      console.log(uid);
-      console.log(email);
-      console.log(name);
-
-      fetchProperties(city, state, address);
-
-    } else {
-      alert("Please login before continuing");
-    }
-  };
-
-  useEffect(() => {
-    setLogin(false);
-  });
-
-  const options = {
-    method: 'GET',
-    headers: {
-      'X-RapidAPI-Key': '2661057b61msh8e6271d7a1763b6p12ffb0jsnc06db3ad292e',
-      'X-RapidAPI-Host': 'us-real-estate.p.rapidapi.com'
+      performSearch();
     }
   };
 
 
-  const fetchProperties = (stateCode, city, location) => {
-
-    const button = document.getElementById('search');
-
-    if(stateCode === '' || city === '' || location === '') {
-      alert("Invalid input");
-    } else {
-      /*console.log(stateCode);
-      console.log(city);
-      console.log(location);*/
-
-      const formattedAddress = `${location} ${stateCode} ${city}`;
-      const perfect = encodeURIComponent(formattedAddress);
-      console.log(perfect);
-
-      const propID = `https://us-real-estate.p.rapidapi.com/location/suggest?input=${perfect}`;
-
-      fetch(propID, options)
-      .then(response => response.json())
-      .then(response => {
-        // for each select first property id and resolve to property
-        const property = response.data[0].property_id;
-
-        /*let fbaseProps = Object.values(property);
-
-        for(let i = 0; i < fbaseProps.length; i++) {
-          let properties = ref(database, 'properties/' + fbaseProps[i].permalink);
-          if(get(properties) != null) {
-            console.log('already!');
-            continue;
-          }
-          console.log(fbaseProps[i]);
-          set(properties, fbaseProps[i]);
-        }*/
-
-        console.log(property);
-
-        setListing(property);
-
-        const properties = ref(database, 'properties/' + property);
-
-        get(properties).then((snapshot) => {
-          if (snapshot.exists()) {
-            console.log("Already exists");
-            setShowDetails(true);
-            return;
-          } else {
-            console.log("No data available");
-            const propDetails = `https://us-real-estate.p.rapidapi.com/v2/property-detail?property_id=${property}`;
-
-            fetch(propDetails, options).then(details => details.json())
-            .then(details => {
-              console.log(details);
-    
-              // Set firebase property data
-    
-              let json = details.data.property_detail;
-              // Remove child element product_attributes
-              delete json.product_attributes;
-              set(properties, json);
-              setShowDetails(true);
-            }).catch(err => console.error(err));
-          }
-        }).catch((error) => {
-          console.error(error);
-        })
-        
-        const userRef = ref(database, 'users/' + props.user.uid + '/history/');
-
-        get(userRef).then((snapshot) => {
-          let historyArray = snapshot.val() || []; // If the history array is null or undefined, initialize it as an empty array
-
-          // Check if the listing_id is not already present in the historyArray
-          if (!historyArray.includes(property)) {
-            historyArray.push(property); // Append the new listing_id to the history array
-            set(userRef, historyArray) // Update the user's history with the modified array
-              .then(() => {
-                console.log('Successfully updated user history.');
-              })
-              .catch((error) => {
-                console.error('Error updating user history:', error);
-              });
-          } else {
-            console.log('listing_id already exists in user history.');
-          }
-        }).catch((error) => {
-          console.error('Error fetching user history:', error);
-        });
-        
-      
-      })
-      .catch(err => console.error(err));
+  const handlePriceChange = (field, newValue) => {
+    // Check the field and set the appropriate state
+    if (field === 'min') {
+      setPriceMin(newValue);
+    } else if (field === 'max') {
+      setPriceMax(newValue);
     }
+  };
 
-
-    // Fetch location from suggest
-    // Resolve to address
-    // Store firebase address, city, state
-    /*const URL = `https://us-real-estate.p.rapidapi.com/v2/for-sale?offset=0&limit=42&state_code=${stateCode}&city=${city}&limit=42`;
-    //const URL = 'https://us-real-estate.p.rapidapi.com/v3/for-sale?state_code=MI&city=Detroit&sort=newest&offset=0&limit=42';*/
-  }
 
   return (
     <>
     <div id="search">
-        <div className="p-4 flex content-center justify-center text-center">
-            <div className="w-1/2 mr-2">
-                <label className="text-3xl block text-grainy mb-2">City</label>
-                <input 
-                className="px-2 py-2 bg-dark-waves rounded-lg text-dark-bland w-full" 
-                type="text" 
-                value={city} 
-                onChange={e => setCity(e.target.value)}
-                />
-            </div>
-            <div className="w-1/2">
-                <label className="text-3xl block text-grainy mb-2">State</label>
-                <select 
-                className="px-2 py-3 bg-dark-waves rounded-lg text-dark-bland w-4/5" 
-                value={state} 
-                onChange={e => setState(e.target.value)}
-                >
-                <option value="">Select a state</option>
-                {states.map(s => <option key={s} value={s}>{s}</option>)}
-                </select>
-            </div>
-        </div>
-        <div className="p-4 flex flex-col items-center">
-            <label className="text-3xl block text-grainy mb-2">Address</label>
-            <div className="w-3/5 mr-2 flex">
-                <input 
-                className="px-2 py-2 bg-dark-waves rounded-lg text-dark-bland w-full" 
-                type="text" 
-                value={address} 
-                onChange={e => setAddress(e.target.value)}
-                />
-            </div>
-        </div>
-        <button id="search" onClick={handleClick} className="active:shadow-none shadow-2xl active:from-black active:to-black focus:bg-black w-1/3 rounded-xl text-wave duration-200 ease-in-out transition my-8 bg-gradient-to-l from-grainy to-bland ">Search</button>
-        <img id="picture" src=""></img>
-        <div id="details"></div>
-        <div id="description"></div>
-        
+      <div className="p-4 flex content-center justify-center text-center">
+          <div className="w-1/4">
+            <label className="text-3xl block text-grainy mb-2">State</label>
+            <select
+              className="px-2 py-3 text-2xl bg-dark-waves rounded-lg text-dark-bland w-4/5"
+              value={state}
+              onChange={(e) => setState(e.target.value)}
+            >
+              <option value=""></option>
+              {states.map((s) => (
+                <option key={s} value={s}>
+                  {s}
+                </option>
+              ))}
+            </select>
+          </div>
+          <div className="w-1/4 ml-2">
+            <label className="text-3xl block text-grainy mb-2">City</label>
+            <input
+              className="px-2 py-2 bg-dark-waves text-2xl rounded-lg text-dark-bland w-full"
+              type="text"
+              value={city}
+              onChange={(e) => setCity(e.target.value)}
+            />
+          </div>
+          <div className="w-1/4 ml-2">
+            <label className="text-3xl block text-grainy mb-2">Beds</label>
+            <select
+              className="text-2xl px-2 py-3 bg-dark-waves rounded-lg text-dark-bland w-4/5"
+              value={beds}
+              onChange={(e) => setBeds(e.target.value)}
+            >
+              {[1, 2, 3, 4, 5].map((bed) => (
+                <option key={bed} value={bed}>
+                  {bed}
+                </option>
+              ))}
+            </select>
+          </div>
+          <div className="w-1/4 ml-2">
+            <label className="text-3xl block text-grainy mb-2">Baths</label>
+            <select
+              className="px-2 py-3 text-2xl bg-dark-waves rounded-lg text-dark-bland w-4/5"
+              value={baths}
+              onChange={(e) => setBaths(e.target.value)}
+            >
+              {[1, 2, 3, 4, 5].map((bath) => (
+                <option key={bath} value={bath}>
+                  {bath}
+                </option>
+              ))}
+          </select>
+      </div>
     </div>
-    {showDetails && <Details listing_id={listing_id}/>}
+
+
+    { /* HANDLE CLICK */}
+      
+    </div>
+      <div className="flex justify-center items-center space-x-2 w-full"> {/* Container for the inputs */}
+        <div className="flex flex-col items-center w-full"> {/* Container for the first input group */}
+          <label htmlFor="price-min-input" className="mb-1 text-center text-2xl text-bland">Price Minimum</label>
+          <CurrencyInput 
+            id="price-min-input"
+            value={priceMin} 
+            onChange={(newValue) => handlePriceChange('min', newValue)}
+            // ...other props if needed
+            className="form-input w-full" // Make input full width inside its container
+            placeholder="$0.00"
+          />
+        </div>
+
+        <div className="flex flex-col items-center w-full"> {/* Container for the second input group */}
+          <label htmlFor="price-max-input" className="mb-1 text-center text-2xl text-bland">Price Maximum</label>
+          <CurrencyInput 
+            id="price-max-input"
+            value={priceMax} 
+            onChange={(newValue) => handlePriceChange('max', newValue)}
+            // ...other props if needed
+            className="form-input w-full" // Make input full width inside its container
+            placeholder="$200,000"
+          />
+        </div>
+      </div>
+
+      <button id="search" onClick={handleClick} className="active:shadow-none shadow-2xl active:from-black active:to-black focus:bg-black w-1/3 rounded-xl text-wave duration-200 ease-in-out transition my-8 bg-gradient-to-l from-grainy to-bland text-2xl">Search</button>
+      <PropertyCarousel properties={propertyData} />
     </>
   );
 };

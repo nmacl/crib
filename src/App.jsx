@@ -9,10 +9,7 @@ export default function App() {
   console.log(import.meta.env.DATABASE_URL);
   return (
     <div>
-          <Routes>
-            <Route path="/" element={<Home />} />
-            <Route path="/about" element={<About />} />
-         </Routes>
+      {<Home/>}
     </div>
   );
 }
