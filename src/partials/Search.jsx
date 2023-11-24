@@ -93,6 +93,7 @@ function Search(props) {
         console.log(`Average rent: ${averageRent}`);
         setRent(averageRent);
       } else {
+        setLoading(false);
         console.error('No rental data available');
       }
 
@@ -102,6 +103,7 @@ function Search(props) {
         console.log(`Average sold: ${averageSold}`);
         setSold(averageSold);
       } else {
+        setLoading(false);
         console.error('No sold data available');
       }
   
@@ -119,6 +121,7 @@ function Search(props) {
         });
       } else {
         alert('No property data available');
+        setLoading(false);
       }
     } catch (error) {
       console.error('Error fetching data: ', error);

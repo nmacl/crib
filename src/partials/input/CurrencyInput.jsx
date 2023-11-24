@@ -46,7 +46,7 @@ function CurrencyInput(props) {
 
   return (
     <input
-    className="w-3/4 text-2xl rounded-lg p-2"
+    className="w-3/4 text-2xl rounded-lg p-2 text-black bg-dark-waves"
       type="text"
       value={value}
       onChange={handleChange}

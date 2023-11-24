@@ -5,7 +5,7 @@
   "type": "module",
   "scripts": {
     "dev": "vite",
-    "build": "vite build && firebase deploy",
+    "build": "vite build && firebase deploy --only hosting",
     "preview": "vite preview"
   },
   "dependencies": {
@@ -14,6 +14,7 @@
     "@fortawesome/react-fontawesome": "^0.2.0",
     "animate.css": "^4.1.1",
     "axios": "^1.5.1",
+    "express": "^4.18.2",
     "firebase": "^9.23.0",
     "firebase-react-hooks": "^0.8.0",
     "firebaseui": "^6.0.2",

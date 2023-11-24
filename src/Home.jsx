@@ -82,10 +82,6 @@ function Home() {
     })
   }, [])
 
-  const toggle = () => {
-    setToggleVal(!toggleVal);
-  };
-
   return (
     <div>
       <div className="mt-8 ">
@@ -95,7 +91,7 @@ function Home() {
           {user ? <Dashboard auth={auth} user={user} db={database}/> : <SignIn/>}
         </section>
         <div className="mt-4 text-xl text-center max-w-l">
-          <Toggle toggle={toggle} toggleVal={toggleVal} />
+          {user ? <Toggle toggleVal={toggleVal} /> : null }
         </div>
 
         {user && (toggleVal ? <Lookup/> : <Search user={user} login={true}/>)}
@@ -104,19 +100,32 @@ function Home() {
       </div>
     </div>
   )
+
+  
+  function Toggle({ toggleVal }) {
+    return (
+      <div className="p-12 toggle-bar justify-center mx-auto">
+        <button
+          className={`bg-indigo-500 text-white px-4 py-2 rounded-l shadow-xl font-bold ${
+            !toggleVal ? 'opacity-100' : 'opacity-50'
+          }`}
+          onClick={() => setToggleVal(false)}
+        >
+          Area Search
+        </button>
+        <button
+          className={`bg-indigo-500 text-white px-4 py-2 rounded-r shadow-xl font-bold ${
+            toggleVal ? 'opacity-100' : 'opacity-50'
+          }`}
+          onClick={() => setToggleVal(true)}
+        >
+          House Lookup
+        </button>
+      </div>
+    );
+  }
 }
 
-function Toggle({ toggle, toggleVal }) {
-  return (
-    <div className="p-12 toggle-bar justify-center mx-auto" onClick={toggle}>
-      <label className={`font-bold ${!toggleVal ? 'opacity-100' : 'opacity-50'}`}>Area Search</label>
-      <div className={`toggle-switch ${toggleVal ? 'on' : 'off'}`}>
-        <div className="toggle-knob"></div>
-      </div>
-      <label className={`font-bold ${toggleVal ? 'opacity-100' : 'opacity-50'}`}>House Lookup</label>
-    </div>
-  );
-}
 
 
 function About() {

@@ -54,6 +54,7 @@ const PropertyCarousel = ({ properties }) => {
           {details.beds && `${details.beds} bd`} 
           {details.baths && ` | ${details.baths} ba`} 
           {details.sqft && ` | ${details.sqft} sqft`}
+          {details.lotSqft && ` | ${Number(details.lotSqft/43560).toFixed(2)} acres`}
         </p>
         {details.yearBuilt && <p className="font-semibold">Year Built: {details.yearBuilt}</p>}
       </div>

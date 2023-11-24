@@ -28,6 +28,7 @@ export const parseProperty = (rawData) => {
       baths,
       sqft,
       year_built: yearBuilt,
+      lot_sqft: lotSqft,
     } = description;
 
     if (!addressLine || !city || !stateCode || !postalCode) {
@@ -51,6 +52,7 @@ export const parseProperty = (rawData) => {
         baths,
         sqft,
         yearBuilt,
+        lotSqft
       },
       // Add more fields as needed
     };

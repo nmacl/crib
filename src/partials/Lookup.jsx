@@ -38,11 +38,13 @@ function Lookup() {
         if (response.data && response.data.length > 0) {
             setListing(response.data[0].property_id);
         } else {
+          setLoading(false);
             console.log('No data found');
             setListing(''); // Reset listing ID if no data is found
         }
         setLoading(false);
     }).catch((error) => {
+      setLoading(false);
         console.error("Error fetching data:", error);
         setListing(''); // Reset listing ID in case of an error
     });

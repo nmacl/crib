@@ -5,6 +5,6 @@ import react from '@vitejs/plugin-react'
 export default defineConfig({
   plugins: [react()],
   build: {
-    outDir: '/Users/nolanmaclear/Desktop/crib/public'
+    outDir: 'C:/Users/nmacl/Desktop/crib/public'
   },
 })
