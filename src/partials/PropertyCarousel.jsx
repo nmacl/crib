@@ -1,5 +1,8 @@
 import React, { useState, useEffect } from 'react';
 import './Carousel.css';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faStar, faQuestionCircle } from '@fortawesome/free-regular-svg-icons';
+import { faStar as solidStar } from '@fortawesome/free-solid-svg-icons';
 
 const PropertyCarousel = ({ properties }) => {
 
@@ -40,13 +43,26 @@ const PropertyCarousel = ({ properties }) => {
 
   // Safely access the 'address' and 'details' objects. If they don't exist, default to an empty object.
   const { address = {}, details = {}, primary_photo, rent, sold } = property;
+  const [isStarHovered, setIsStarHovered] = useState(false);
+
   // Render the information only if it exists, otherwise, leave it blank
   return (
-    <div className="carousel-container">
-      <button onClick={goPrev} className="text-2xl hover:bg-indigo-500 w-1/2">Prev</button>
-      <button onClick={goNext} className="text-2xl hover:bg-indigo-500 w-1/2">Next ({currentIndex+1}/{properties.length})</button>
+    <div className="carousel-container mb-24">
+      <button onClick={goPrev} className="text-3xl hover:bg-indigo-500 w-1/2">Prev</button>
+      <button onClick={goNext} className="text-3xl hover:bg-indigo-500 w-1/2">Next ({currentIndex+1}/{properties.length})</button>
       
       <div className="carousel-card">
+        <div className="flex content-center justify-center">
+          <div className="flex content-center justify-center tooltip">
+            <FontAwesomeIcon icon={faQuestionCircle} className="opacity-80 mr-4 w-5 h-5 ml-2" />
+            <span className="tooltip-text">Add to favorites</span>
+          </div>
+          <a onMouseEnter={() => setIsStarHovered(true)} onMouseLeave={() => setIsStarHovered(false)}>
+            <FontAwesomeIcon className="w-12 h-12 cursor-pointer hover:scale-125 duration-150 transform text-yellow-500" icon={isStarHovered ? solidStar : faStar}/>
+          </a>
+        </div>
+        
+
         <h2 className="font-bold">{[address.line, address.city, address.state, address.zipcode].filter(Boolean).join(', ')}</h2>
         {/* Assuming that 'price' is provided at the same level as 'address' and 'details' */}
         {property.list_price && <p className="text-emerald-300 font-semibold">Price: {new Intl.NumberFormat('en-US', { style: 'currency', currency: 'USD' }).format(Math.round(property.list_price))}</p>}

@@ -1,11 +1,12 @@
 import Background from './partials/Background';
 import Search from './partials/Search';
 import Title from './partials/Title';
-import Dashboard from './partials/Dashboard'
 import Lookup from './partials/Lookup';
 import './App.css'
 import 'animate.css';
 import './ToggleBar.css'; // Assuming you have a separate CSS file for styles
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faStar } from '@fortawesome/free-regular-svg-icons';
 
 // Import the functions you need from the SDKs you need
 import { initializeApp } from "firebase/app";
@@ -42,6 +43,23 @@ const provider = new GoogleAuthProvider();
 provider.setCustomParameters({ prompt: 'select_account' });
 
 const auth = getAuth();
+
+const Dashboard = ({ user, auth, db }) => {
+  return (
+      <>
+          <div className="flex content-center justify-center gap-16 mt-8 border-b-2 border-grainy pb-6">
+              <img className="rounded-xl h-16 w-16" src={user.photoURL} alt="" />
+              <button 
+                  className="hover:border-red-500 hover:border-3 p-16 rounded-2xl button signout bg-transparent font-bold py-2 px-4 text-2xl text-waves"
+                  onClick={() => auth.signOut()}
+              >
+              Sign out
+              </button>
+              <FontAwesomeIcon onClick={() => history()}className="w-16 h-16 text-yellow-400 hover:scale-125 duration-100 transform cursor-pointer" icon={faStar} />
+          </div>
+      </>
+  )
+}
 
 
 function SignIn() {
@@ -130,14 +148,14 @@ function Home() {
 
 function About() {
   return (
-    <div className="mt-8 mx-auto max-w-md text-left border-grainy border-2 p-8">
-      <ul className="list-none list-inside space-y-4">
-        <li className="text-xl leading-snug">Search properties by state, city, price, and filters.</li>
-        <li className="text-xl leading-snug">Analyze rental investment prospects with ease.</li>
-        <li className="text-xl leading-snug">Discover key metrics visually.</li>
-        <li className="text-xl leading-snug">Use mortgage calculator and rental estimates.</li>
-      </ul>
-    </div>
+    <>
+      <h1 className="text-3.5xl p-8 font-sans opacity-90">Real Estate Market Analysis</h1>
+      <div className="mt-8 mx-auto max-w-md text-left border-grainy border-2 p-8 font-sans">
+        <ul className="list-none list-inside space-y-4">
+          <li className="text-2xl leading-snug font-sans font-medium">Identify the top property values in any zip code or city.</li>
+        </ul>
+      </div>
+    </>
   );
 }
 

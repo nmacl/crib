@@ -94,6 +94,7 @@ function Search(props) {
         setRent(averageRent);
       } else {
         setLoading(false);
+        alert("We're sorry. There was a problem. Please try again.");
         console.error('No rental data available');
       }
 
@@ -105,6 +106,7 @@ function Search(props) {
       } else {
         setLoading(false);
         console.error('No sold data available');
+        alert("We're sorry. There was a problem. Please try again.");
       }
   
       const propertiesResponse = await searchProperties(city, state, beds, baths, priceMin, priceMax);
@@ -122,6 +124,7 @@ function Search(props) {
       } else {
         alert('No property data available');
         setLoading(false);
+        alert("We're sorry. There was a problem. Please try again.");
       }
     } catch (error) {
       console.error('Error fetching data: ', error);
